@@ -4,9 +4,19 @@ import Link from "next/link";
 import { navigation, siteConfig } from "@/lib/constants";
 import { useState } from "react";
 import { MobileNav } from "./MobileNav";
+import { LanguageSwitcher } from "@/components/ui";
+import { useTranslations } from "next-intl";
 
 export function Header() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+    const t = useTranslations('navigation');
+
+    const navLabels: Record<string, string> = {
+        'Home': t('home'),
+        'Chi Sono': t('about'),
+        'Articoli': t('articles'),
+        'Contatti': t('contact'),
+    };
 
     return (
         <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100">
@@ -18,17 +28,21 @@ export function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-8">
-                        {navigation.main.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
-                            >
-                                {item.name}
-                            </Link>
-                        ))}
-                    </nav>
+                    <div className="hidden md:flex items-center gap-6">
+                        <nav className="flex items-center gap-8">
+                            {navigation.main.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
+                                >
+                                    {navLabels[item.name] || item.name}
+                                </Link>
+                            ))}
+                        </nav>
+                        {/* Language Switcher */}
+                        <LanguageSwitcher />
+                    </div>
 
                     {/* Mobile Menu Button */}
                     <button

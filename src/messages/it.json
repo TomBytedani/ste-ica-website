@@ -1,0 +1,13 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "Chi Sono",
+        "articles": "Articoli",
+        "contact": "Contatti"
+    },
+    "footer": {
+        "contactTitle": "Contatti",
+        "infoTitle": "Info",
+        "copyright": "Tutti i diritti riservati."
+    }
+}

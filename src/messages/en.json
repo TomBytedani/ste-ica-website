@@ -1,0 +1,13 @@
+{
+    "navigation": {
+        "home": "Home",
+        "about": "About",
+        "articles": "Articles",
+        "contact": "Contact"
+    },
+    "footer": {
+        "contactTitle": "Contact",
+        "infoTitle": "Info",
+        "copyright": "All rights reserved."
+    }
+}

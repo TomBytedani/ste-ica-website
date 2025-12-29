@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { navigation } from "@/lib/constants";
+import { LanguageSwitcher } from "@/components/ui";
+import { useTranslations } from "next-intl";
 import { useEffect } from "react";
 
 interface MobileNavProps {
@@ -10,6 +12,15 @@ interface MobileNavProps {
 }
 
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
+    const t = useTranslations('navigation');
+
+    const navLabels: Record<string, string> = {
+        'Home': t('home'),
+        'Chi Sono': t('about'),
+        'Articoli': t('articles'),
+        'Contatti': t('contact'),
+    };
+
     // Close on escape key
     useEffect(() => {
         const handleEscape = (e: KeyboardEvent) => {
@@ -52,10 +63,16 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                                 onClick={onClose}
                                 className="block py-3 text-lg font-medium text-[var(--color-text-primary)] hover:text-[var(--color-accent-hover)] transition-colors"
                             >
-                                {item.name}
+                                {navLabels[item.name] || item.name}
                             </Link>
                         </li>
                     ))}
+                    {/* Language Switcher in Mobile Menu */}
+                    <li className="pt-2 border-t border-gray-100">
+                        <div className="py-2">
+                            <LanguageSwitcher />
+                        </div>
+                    </li>
                 </ul>
             </nav>
         </>
