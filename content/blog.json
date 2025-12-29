@@ -1,0 +1,23 @@
+{
+    "title": "Articoli e Podcast",
+    "description": "Riflessioni e approfondimenti su psicologia, relazioni e benessere mentale",
+    "podcast": {
+        "title": "Podcast",
+        "description": "Ascolta il mio podcast con riflessioni e approfondimenti su psicologia e benessere mentale",
+        "spreakerId": "show/5391022"
+    },
+    "subscribeLinks": [
+        {
+            "name": "Spotify",
+            "href": "#"
+        },
+        {
+            "name": "Apple Podcasts",
+            "href": "#"
+        },
+        {
+            "name": "Google Podcasts",
+            "href": "#"
+        }
+    ]
+}

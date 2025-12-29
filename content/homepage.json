@@ -1,0 +1,58 @@
+{
+    "hero": {
+        "title": "Stefano Icardi",
+        "subtitle": "Psicologo Clinico",
+        "description": "Supporto psicologico e percorsi individuali per adulti con approccio relazionale e personalizzato",
+        "cta": {
+            "primary": {
+                "text": "Prenota un appuntamento",
+                "href": "#contatti"
+            },
+            "secondary": {
+                "text": "Scopri di più",
+                "href": "#chi-sono"
+            }
+        }
+    },
+    "whyPsychologist": {
+        "title": "Perché rivolgersi ad uno psicologo?",
+        "content": "Rivolgersi a uno psicologo può essere una scelta importante in diversi momenti della vita. Lo psicologo offre uno spazio protetto e non giudicante dove poter esplorare le proprie emozioni, pensieri e comportamenti."
+    },
+    "practicalInfo": {
+        "title": "Informazioni pratiche",
+        "items": [
+            {
+                "title": "Dove ricevo",
+                "description": "Viale Luigi Majno, 38 - Milano",
+                "icon": "location"
+            },
+            {
+                "title": "Primo colloquio",
+                "description": "Il primo incontro serve a conoscerci e definire insieme gli obiettivi del percorso",
+                "icon": "calendar"
+            },
+            {
+                "title": "Durata e frequenza",
+                "description": "Ogni seduta dura circa 50 minuti con cadenza settimanale o quindicinale",
+                "icon": "clock"
+            }
+        ]
+    },
+    "journey": {
+        "title": "Il percorso psicologico",
+        "content": "Un percorso psicologico è un'esperienza di crescita personale che permette di sviluppare una maggiore consapevolezza di sé e delle proprie dinamiche relazionali."
+    },
+    "interventionAreas": {
+        "title": "Aree di intervento",
+        "areas": [
+            "Ansia e attacchi di panico",
+            "Depressione e disturbi dell'umore",
+            "Difficoltà relazionali",
+            "Autostima e sicurezza personale",
+            "Gestione dello stress",
+            "Elaborazione del lutto",
+            "Transizioni di vita",
+            "Crescita personale"
+        ]
+    }
+}
