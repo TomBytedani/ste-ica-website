@@ -2,22 +2,15 @@
     "title": "Articoli e Podcast",
     "description": "Riflessioni e approfondimenti su psicologia, relazioni e benessere mentale",
     "podcast": {
-        "title": "Podcast",
-        "description": "Ascolta il mio podcast con riflessioni e approfondimenti su psicologia e benessere mentale",
-        "spreakerId": "show/5391022"
+        "title": "Palombari 23 - Psicologia",
+        "description": "Podcast in collaborazione con la Radio del Politecnico di Milano",
+        "mixcloudUrl": "https://www.mixcloud.com/Palombari/palombari-23-psicologia/",
+        "mixcloudFeed": "/Palombari/palombari-23-psicologia/"
     },
     "subscribeLinks": [
         {
-            "name": "Spotify",
-            "href": "#"
-        },
-        {
-            "name": "Apple Podcasts",
-            "href": "#"
-        },
-        {
-            "name": "Google Podcasts",
-            "href": "#"
+            "name": "Mixcloud",
+            "href": "https://www.mixcloud.com/Palombari/palombari-23-psicologia/"
         }
     ]
 }
