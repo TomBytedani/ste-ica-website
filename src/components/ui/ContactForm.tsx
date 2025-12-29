@@ -1,10 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 import { Button } from "./Button";
 import type { ContactFormData, ContactFormState } from "@/lib/types";
 
 export function ContactForm() {
+    const t = useTranslations("contactForm");
     const [formData, setFormData] = useState<ContactFormData>({
         nome: "",
         email: "",
@@ -38,13 +40,13 @@ export function ContactForm() {
 
             setState({
                 status: "success",
-                message: "Messaggio inviato con successo! Ti risponderemo al più presto.",
+                message: t("successMessage"),
             });
             setFormData({ nome: "", email: "", telefono: "", messaggio: "" });
         } catch {
             setState({
                 status: "error",
-                message: "Si è verificato un errore. Riprova più tardi.",
+                message: t("errorMessage"),
             });
         }
     };
@@ -53,7 +55,7 @@ export function ContactForm() {
         <form onSubmit={handleSubmit} className="space-y-6">
             <div>
                 <label htmlFor="nome" className="form-label">
-                    Nome *
+                    {t("nameLabel")} {t("requiredField")}
                 </label>
                 <input
                     type="text"
@@ -63,13 +65,13 @@ export function ContactForm() {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="Il tuo nome"
+                    placeholder={t("namePlaceholder")}
                 />
             </div>
 
             <div>
                 <label htmlFor="email" className="form-label">
-                    Email *
+                    {t("emailLabel")} {t("requiredField")}
                 </label>
                 <input
                     type="email"
@@ -79,13 +81,13 @@ export function ContactForm() {
                     onChange={handleChange}
                     required
                     className="form-input"
-                    placeholder="La tua email"
+                    placeholder={t("emailPlaceholder")}
                 />
             </div>
 
             <div>
                 <label htmlFor="telefono" className="form-label">
-                    Telefono
+                    {t("phoneLabel")}
                 </label>
                 <input
                     type="tel"
@@ -94,13 +96,13 @@ export function ContactForm() {
                     value={formData.telefono}
                     onChange={handleChange}
                     className="form-input"
-                    placeholder="Il tuo numero di telefono"
+                    placeholder={t("phonePlaceholder")}
                 />
             </div>
 
             <div>
                 <label htmlFor="messaggio" className="form-label">
-                    Messaggio *
+                    {t("messageLabel")} {t("requiredField")}
                 </label>
                 <textarea
                     id="messaggio"
@@ -110,15 +112,15 @@ export function ContactForm() {
                     required
                     rows={5}
                     className="form-input resize-none"
-                    placeholder="Scrivi il tuo messaggio..."
+                    placeholder={t("messagePlaceholder")}
                 />
             </div>
 
             {state.message && (
                 <div
                     className={`p-4 rounded-md ${state.status === "success"
-                            ? "bg-green-50 text-green-800"
-                            : "bg-red-50 text-red-800"
+                        ? "bg-green-50 text-green-800"
+                        : "bg-red-50 text-red-800"
                         }`}
                 >
                     {state.message}
@@ -131,7 +133,7 @@ export function ContactForm() {
                 loading={state.status === "submitting"}
                 disabled={state.status === "submitting"}
             >
-                Invia messaggio
+                {t("submitButton")}
             </Button>
         </form>
     );

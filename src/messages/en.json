@@ -1,4 +1,65 @@
 {
+    "homepage": {
+        "hero": {
+            "title": "Stefano Icardi",
+            "subtitle": "Clinical Psychologist",
+            "subtitleExtended": "Clinical Psychologist · Psychotherapist in Training",
+            "description": "I provide psychological support and individual therapy for adults. My approach is relational, integrated, and personalized.",
+            "ctaPrimary": "Contact Me",
+            "ctaSecondary": "Learn More",
+            "trustSignal": "Registered with the Order of Psychologists of Lombardy, Register A (No. 22963)"
+        },
+        "whyPsychologist": {
+            "title": "Why See a Psychologist?",
+            "paragraph1": "In a society where everything moves quickly, where we struggle to find time to reflect on what is happening to us, we are increasingly connected, but without real connections.",
+            "paragraph2": "A psychologist can help create a space for self-reflection, a protected place where you can explore your emotions, thoughts, and behaviors without judgment.",
+            "paragraph3": "A psychological journey can help you better understand yourself, develop new strategies for dealing with difficulties, and improve the quality of your relationships."
+        },
+        "practicalInfo": {
+            "title": "Practical Information",
+            "subtitle": "Everything you need to know to start a journey",
+            "whenToSeek": {
+                "title": "When to Seek Help",
+                "description": "Suffering is a very subjective matter. What may be painful for us might seem superficial to others, but this does not invalidate it. Being aware of what you feel inside is the first step.",
+                "detail1": "Recognize your distress",
+                "detail2": "Accept your emotions",
+                "detail3": "Ask for support without judgment"
+            },
+            "duration": {
+                "title": "Duration and Process",
+                "description": "Each session lasts approximately 50 minutes. The journey generally spans from a few months to a year, based on the goals we agree upon together.",
+                "detail1": "50-minute sessions",
+                "detail2": "In-office in Milan or online",
+                "detail3": "Personalized duration"
+            },
+            "frequency": {
+                "title": "Session Frequency",
+                "description": "The frequency is typically weekly or biweekly. It is agreed upon together based on personal needs and the goals of the journey.",
+                "detail1": "Weekly or biweekly schedule",
+                "detail2": "Flexible appointments",
+                "detail3": "Co-constructed journey"
+            }
+        },
+        "journey": {
+            "title": "The Therapeutic Journey",
+            "paragraph1": "The therapeutic journey focuses on the individual with the aim of supporting them in processing critical moments in life that create distress and that they feel unable to manage independently.",
+            "paragraph2": "In the process, we focus on the individual and how they face different situations (relationships, work, and daily life), with particular attention to relational dynamics, while enhancing and strengthening the resources they already possess.",
+            "paragraph3": "My approach is based on the therapeutic relationship as the main tool for change, in a context of empathetic and non-judgmental listening."
+        },
+        "interventionAreas": {
+            "title": "Areas of Intervention",
+            "subtitle": "Areas where I can offer you support",
+            "area1": "Relationship issues",
+            "area2": "Emotional management",
+            "area3": "Self-awareness and self-esteem",
+            "area4": "Work-related stress",
+            "area5": "Anxiety states",
+            "area6": "Depressive states",
+            "area7": "Learning difficulties",
+            "area8": "Insecurities and blocks in life changes",
+            "area9": "Addiction-related issues"
+        }
+    },
     "navigation": {
         "home": "Home",
         "about": "About",
@@ -9,6 +70,49 @@
         "contactTitle": "Contact",
         "infoTitle": "Info",
         "copyright": "All rights reserved."
+    },
+    "contact": {
+        "title": "Contact Me",
+        "subtitle": "Fill out the form or contact me directly",
+        "formTitle": "Request an Appointment",
+        "infoTitle": "Contact Information",
+        "addressLabel": "Address",
+        "emailLabel": "Email",
+        "phoneLabel": "Phone",
+        "openInMaps": "Open in Google Maps",
+        "whatsappButton": "Message me on WhatsApp",
+        "followSocial": "Follow me on social media"
+    },
+    "contactForm": {
+        "nameLabel": "Name",
+        "namePlaceholder": "Your name",
+        "emailLabel": "Email",
+        "emailPlaceholder": "Your email",
+        "phoneLabel": "Phone",
+        "phonePlaceholder": "Your phone number",
+        "messageLabel": "Message",
+        "messagePlaceholder": "Write your message...",
+        "submitButton": "Send Message",
+        "successMessage": "Message sent successfully! We will reply as soon as possible.",
+        "errorMessage": "An error occurred. Please try again later.",
+        "requiredField": "*"
+    },
+    "cookieConsent": {
+        "title": "This site uses cookies",
+        "description": "We use cookies to improve your browsing experience. Essential cookies are necessary for the site to function. You can choose whether to also accept analytics cookies to help us improve our service.",
+        "acceptButton": "Accept All",
+        "rejectButton": "Essential Only",
+        "acceptAriaLabel": "Accept all cookies",
+        "rejectAriaLabel": "Reject non-essential cookies"
+    },
+    "buttons": {
+        "bookAppointment": "Book an Appointment",
+        "learnMore": "Learn More",
+        "sendMessage": "Send Message",
+        "downloadCV": "Download my CV",
+        "readMore": "Read More",
+        "backToHome": "Back to Home",
+        "contact": "Contact Me"
     },
     "chiSono": {
         "hero": {

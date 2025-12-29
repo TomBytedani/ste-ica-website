@@ -1,4 +1,65 @@
 {
+    "homepage": {
+        "hero": {
+            "title": "Stefano Icardi",
+            "subtitle": "Psicologo Clinico",
+            "subtitleExtended": "Psicologo Clinico · Specializzando Psicoterapeuta",
+            "description": "Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti. Il mio approccio è di tipo relazionale, integrato e personalizzato.",
+            "ctaPrimary": "Scrivimi",
+            "ctaSecondary": "Scopri di più",
+            "trustSignal": "Iscritto all'Ordine degli Psicologi della Lombardia, Albo A (n. 22963)"
+        },
+        "whyPsychologist": {
+            "title": "Perché rivolgersi ad uno psicologo?",
+            "paragraph1": "In una società dove tutto scorre velocemente, dove si fatica a trovare il tempo per riflettere su quello che ci sta accadendo, si è sempre più connessi, ma senza delle vere connessioni.",
+            "paragraph2": "La figura dello psicologo può aiutare a creare uno spazio di riflessione su di sé, un luogo protetto dove esplorare le proprie emozioni, pensieri e comportamenti senza giudizio.",
+            "paragraph3": "Un percorso psicologico può aiutarti a comprendere meglio te stesso, a sviluppare nuove strategie per affrontare le difficoltà e a migliorare la qualità delle tue relazioni."
+        },
+        "practicalInfo": {
+            "title": "Informazioni pratiche",
+            "subtitle": "Tutto quello che devi sapere per iniziare un percorso",
+            "whenToSeek": {
+                "title": "Quando chiedere aiuto",
+                "description": "La sofferenza è una questione molto soggettiva. Quello che per noi può essere doloroso per altri potrebbe sembrare superficiale, ma questo non lo invalida. Essere consapevoli di ciò che si prova dentro di sé è il primo passo.",
+                "detail1": "Riconoscere il disagio",
+                "detail2": "Accogliere le proprie emozioni",
+                "detail3": "Chiedere supporto senza giudizio"
+            },
+            "duration": {
+                "title": "Durata e svolgimento",
+                "description": "Ogni seduta dura circa 50 minuti. Il percorso si articola generalmente su un periodo che va da pochi mesi a un anno, in base agli obiettivi concordati insieme.",
+                "detail1": "Sedute da 50 minuti",
+                "detail2": "In studio a Milano o online",
+                "detail3": "Durata personalizzata"
+            },
+            "frequency": {
+                "title": "Frequenza delle sedute",
+                "description": "La frequenza è tipicamente settimanale o quindicinale. Viene concordata insieme sulla base delle esigenze personali e degli obiettivi del percorso.",
+                "detail1": "Cadenza settimanale o quindicinale",
+                "detail2": "Flessibilità negli appuntamenti",
+                "detail3": "Co-costruzione del percorso"
+            }
+        },
+        "journey": {
+            "title": "Il percorso psicologico",
+            "paragraph1": "Il percorso psicologico è incentrato sul singolo con la finalità di supportarlo nella rielaborazione di momenti critici della vita che gli creano disagio, e che si sente di non riuscire a gestire in autonomia.",
+            "paragraph2": "Nel percorso ci si sofferma sul soggetto e su come affronta situazioni diverse (relazioni, lavoro e vita quotidiana), con particolare attenzione alle dinamiche relazionali, andando a valorizzare e potenziare le risorse che già possiede.",
+            "paragraph3": "Il mio approccio si basa sulla relazione terapeutica come strumento principale di cambiamento, in un contesto di ascolto empatico e non giudicante."
+        },
+        "interventionAreas": {
+            "title": "Aree di intervento",
+            "subtitle": "Ambiti in cui posso offrirti supporto",
+            "area1": "Problematiche relazionali",
+            "area2": "Gestione delle emozioni",
+            "area3": "Consapevolezza e autostima",
+            "area4": "Stress correlato al lavoro",
+            "area5": "Stati d'ansia",
+            "area6": "Stati depressivi",
+            "area7": "Difficoltà nell'apprendimento",
+            "area8": "Insicurezze e blocchi nei cambiamenti di vita",
+            "area9": "Problematiche afferenti alle dipendenze"
+        }
+    },
     "navigation": {
         "home": "Home",
         "about": "Chi Sono",
@@ -9,6 +70,49 @@
         "contactTitle": "Contatti",
         "infoTitle": "Info",
         "copyright": "Tutti i diritti riservati."
+    },
+    "contact": {
+        "title": "Contattami",
+        "subtitle": "Compila il form o contattami direttamente",
+        "formTitle": "Richiedi un appuntamento",
+        "infoTitle": "Informazioni di contatto",
+        "addressLabel": "Indirizzo",
+        "emailLabel": "Email",
+        "phoneLabel": "Telefono",
+        "openInMaps": "Apri in Google Maps",
+        "whatsappButton": "Scrivimi su WhatsApp",
+        "followSocial": "Seguimi sui social"
+    },
+    "contactForm": {
+        "nameLabel": "Nome",
+        "namePlaceholder": "Il tuo nome",
+        "emailLabel": "Email",
+        "emailPlaceholder": "La tua email",
+        "phoneLabel": "Telefono",
+        "phonePlaceholder": "Il tuo numero di telefono",
+        "messageLabel": "Messaggio",
+        "messagePlaceholder": "Scrivi il tuo messaggio...",
+        "submitButton": "Invia messaggio",
+        "successMessage": "Messaggio inviato con successo! Ti risponderemo al più presto.",
+        "errorMessage": "Si è verificato un errore. Riprova più tardi.",
+        "requiredField": "*"
+    },
+    "cookieConsent": {
+        "title": "Questo sito utilizza i cookie",
+        "description": "Utilizziamo i cookie per migliorare la tua esperienza di navigazione. I cookie essenziali sono necessari per il funzionamento del sito. Puoi scegliere se accettare anche i cookie di analisi per aiutarci a migliorare il servizio.",
+        "acceptButton": "Accetta tutti",
+        "rejectButton": "Solo essenziali",
+        "acceptAriaLabel": "Accetta tutti i cookie",
+        "rejectAriaLabel": "Rifiuta i cookie non essenziali"
+    },
+    "buttons": {
+        "bookAppointment": "Prenota un appuntamento",
+        "learnMore": "Scopri di più",
+        "sendMessage": "Invia messaggio",
+        "downloadCV": "Scarica il mio CV",
+        "readMore": "Leggi di più",
+        "backToHome": "Torna alla home",
+        "contact": "Contattami"
     },
     "chiSono": {
         "hero": {
@@ -62,5 +166,40 @@
         "heading": "Pagina non trovata",
         "description": "La pagina che stai cercando non esiste o è stata spostata.",
         "homeButton": "Torna alla Home"
+    },
+    "metadata": {
+        "siteName": "Stefano Icardi - Psicologo",
+        "siteTitle": "Stefano Icardi | Psicologo a Milano",
+        "homepage": {
+            "title": "Stefano Icardi | Psicologo a Milano",
+            "titleTemplate": "%s | Stefano Icardi Psicologo",
+            "description": "Psicologo clinico a Milano. Supporto psicologico e percorsi individuali per adulti con approccio relazionale e personalizzato. Prenota un appuntamento.",
+            "ogTitle": "Stefano Icardi | Psicologo a Milano",
+            "ogDescription": "Supporto psicologico e percorsi individuali per adulti con approccio relazionale."
+        },
+        "chiSono": {
+            "title": "Chi Sono",
+            "description": "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico iscritto all'Ordine della Lombardia. Specializzando in Psicoterapia con approccio relazionale.",
+            "ogTitle": "Chi Sono | Stefano Icardi Psicologo",
+            "ogDescription": "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico a Milano."
+        },
+        "articoli": {
+            "title": "Podcast",
+            "description": "Ascolta il podcast di Stefano Icardi con riflessioni e approfondimenti su psicologia, relazioni e benessere mentale.",
+            "ogTitle": "Podcast | Stefano Icardi Psicologo",
+            "ogDescription": "Riflessioni e approfondimenti su psicologia, relazioni e benessere mentale."
+        },
+        "notFound": {
+            "title": "Pagina Non Trovata",
+            "description": "La pagina che stai cercando non esiste o è stata spostata. Torna alla homepage per continuare la navigazione."
+        },
+        "keywords": [
+            "psicologo",
+            "Milano",
+            "psicologo clinico",
+            "supporto psicologico",
+            "psicoterapia",
+            "Stefano Icardi"
+        ]
     }
 }
