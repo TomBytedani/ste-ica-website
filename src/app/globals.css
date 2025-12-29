@@ -157,6 +157,26 @@ h6 {
   color: white;
 }
 
+/* Ensure button links override global anchor styles */
+a.btn,
+a.btn-primary,
+a[class*="bg-[var(--color-accent-primary)]"] {
+  color: white !important;
+}
+
+a.btn-primary:hover,
+a[class*="bg-[var(--color-accent-primary)]"]:hover {
+  color: white !important;
+}
+
+a.btn-secondary {
+  color: var(--color-accent-primary) !important;
+}
+
+a.btn-secondary:hover {
+  color: white !important;
+}
+
 /* Link styles */
 a {
   color: var(--color-text-primary);
@@ -166,6 +186,15 @@ a {
 
 a:hover {
   color: var(--color-accent-hover);
+}
+
+/* Footer link styles - ensure visibility on dark background */
+footer a {
+  color: #d1d5db;
+}
+
+footer a:hover {
+  color: white;
 }
 
 /* Card styles */
@@ -217,4 +246,21 @@ a:hover {
 
 .text-pretty {
   text-wrap: pretty;
+}
+
+/* Animations */
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-slide-up {
+  animation: slide-up 0.4s ease-out forwards;
 }

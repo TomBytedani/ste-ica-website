@@ -53,6 +53,8 @@ export interface ButtonProps {
     size?: "sm" | "md" | "lg";
     type?: "button" | "submit" | "reset";
     href?: string;
+    target?: "_blank" | "_self" | "_parent" | "_top";
+    rel?: string;
     onClick?: () => void;
     disabled?: boolean;
     loading?: boolean;

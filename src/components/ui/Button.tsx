@@ -7,6 +7,8 @@ export function Button({
     size = "md",
     type = "button",
     href,
+    target,
+    rel,
     onClick,
     disabled = false,
     loading = false,
@@ -14,7 +16,14 @@ export function Button({
     children,
 }: ButtonProps) {
     const baseStyles =
-        "inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus-ring)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+        "btn inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus-ring)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+
+    const variantClasses = {
+        primary: "btn-primary",
+        secondary: "btn-secondary",
+        outline: "btn-outline",
+        ghost: "btn-ghost",
+    };
 
     const variants = {
         primary:
@@ -33,9 +42,23 @@ export function Button({
         lg: "px-8 py-4 text-lg rounded-lg",
     };
 
-    const classes = cn(baseStyles, variants[variant], sizes[size], className);
+    const classes = cn(baseStyles, variantClasses[variant], variants[variant], sizes[size], className);
 
     if (href) {
+        // Use regular anchor for external links
+        if (target === "_blank" || href.startsWith("http") || href.startsWith("//")) {
+            return (
+                <a
+                    href={href}
+                    target={target || "_blank"}
+                    rel={rel || "noopener noreferrer"}
+                    className={classes}
+                >
+                    {loading ? <LoadingSpinner /> : children}
+                </a>
+            );
+        }
+        // Use Next.js Link for internal navigation
         return (
             <Link href={href} className={classes}>
                 {loading ? <LoadingSpinner /> : children}

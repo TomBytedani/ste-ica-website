@@ -1,14 +1,15 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 const areas = [
-    "Ansia e attacchi di panico",
-    "Depressione e disturbi dell'umore",
-    "Difficoltà relazionali",
-    "Autostima e sicurezza personale",
-    "Gestione dello stress",
-    "Elaborazione del lutto",
-    "Transizioni di vita",
-    "Crescita personale",
+    "Problematiche relazionali",
+    "Gestione delle emozioni",
+    "Consapevolezza e autostima",
+    "Stress correlato al lavoro",
+    "Stati d'ansia",
+    "Stati depressivi",
+    "Difficoltà nell'apprendimento",
+    "Insicurezze e blocchi nei cambiamenti di vita",
+    "Problematiche afferenti alle dipendenze",
 ];
 
 export function InterventionAreas() {

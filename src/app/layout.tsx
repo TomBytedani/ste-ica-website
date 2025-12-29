@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Playfair_Display, Inter } from "next/font/google";
+import { CookieConsent } from "@/components/ui/CookieConsent";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -74,6 +75,7 @@ export default function RootLayout({
                     Vai al contenuto principale
                 </a>
                 {children}
+                <CookieConsent />
             </body>
         </html>
     );
