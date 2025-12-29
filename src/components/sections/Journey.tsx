@@ -1,31 +1,28 @@
+"use client";
+
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 
 export function Journey() {
+    const t = useTranslations("homepage.journey");
+
     return (
         <section className="section">
             <div className="container-custom">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Content */}
                     <div>
-                        <SectionHeading title="Il percorso psicologico" align="left" />
+                        <SectionHeading title={t("title")} align="left" />
                         <div className="space-y-5 text-[var(--color-text-secondary)] text-lg leading-relaxed">
                             <p>
-                                Il percorso psicologico è incentrato sul singolo con la finalità
-                                di supportarlo nella rielaborazione di momenti critici della vita
-                                che gli creano disagio, e che si sente di non riuscire a gestire
-                                in autonomia.
+                                {t("paragraph1")}
                             </p>
                             <p>
-                                Nel percorso ci si sofferma sul soggetto e su come affronta
-                                situazioni diverse (relazioni, lavoro e vita quotidiana), con
-                                particolare attenzione alle dinamiche relazionali, andando a
-                                valorizzare e potenziare le risorse che già possiede.
+                                {t("paragraph2")}
                             </p>
                             <p>
-                                Il mio approccio si basa sulla relazione terapeutica come strumento
-                                principale di cambiamento, in un contesto di ascolto empatico e non
-                                giudicante.
+                                {t("paragraph3")}
                             </p>
                         </div>
                     </div>
@@ -46,4 +43,3 @@ export function Journey() {
         </section>
     );
 }
-
