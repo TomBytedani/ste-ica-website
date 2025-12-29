@@ -9,5 +9,58 @@
         "contactTitle": "Contatti",
         "infoTitle": "Info",
         "copyright": "Tutti i diritti riservati."
+    },
+    "chiSono": {
+        "hero": {
+            "title": "Chi Sono",
+            "subtitle": "Psicologo Clinico · Specializzando Psicoterapeuta"
+        },
+        "intro": {
+            "name": "Dott. Stefano Icardi",
+            "badge1": "Psicologo Clinico",
+            "badge2": "Specializzando Psicoterapeuta",
+            "description1": "Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti. Il mio approccio è di tipo relazionale, integrato e personalizzato.",
+            "description2": "Sono iscritto all'Ordine degli Psicologi della Lombardia, Albo A",
+            "contactButton": "Contattami",
+            "cvButton": "Scarica CV"
+        },
+        "formazione": {
+            "title": "Formazione",
+            "degree": "Laurea Magistrale in Psicologia Clinica",
+            "university": "Università degli Studi di Milano-Bicocca",
+            "specialization": "Specializzando in Psicoterapia",
+            "school": "Scuola di Specializzazione in Psicoterapia",
+            "registration": "Iscrizione Albo A - Ordine degli Psicologi della Lombardia",
+            "registrationNumber": "N. 22963"
+        },
+        "attivita": {
+            "title": "Attività",
+            "description1": "Svolgo attività di supporto psicologico e percorsi individuali per adulti, con particolare attenzione alle dinamiche relazionali e alla crescita personale.",
+            "description2": "Il percorso psicologico è incentrato sul singolo con la finalità di supportarlo nella rielaborazione di momenti critici della vita che gli creano disagio, e che si sente di non riuscire a gestire in autonomia.",
+            "description3": "Nel percorso ci si sofferma sul soggetto e su come affronta situazioni diverse (relazioni, lavoro e vita quotidiana), con particolare attenzione alle dinamiche relazionali, andando a valorizzare e potenziare le risorse che già possiede."
+        },
+        "studio": {
+            "title": "Lo Studio",
+            "bookButton": "Prenota un appuntamento",
+            "mapsButton": "Visualizza su Maps"
+        }
+    },
+    "articoli": {
+        "hero": {
+            "title": "Podcast",
+            "subtitle": "Riflessioni e approfondimenti su psicologia e benessere mentale",
+            "description": "In questo podcast condivido pensieri e riflessioni sui temi della psicologia, delle relazioni e della crescita personale. Episodi brevi e accessibili per accompagnarti nella tua quotidianità."
+        },
+        "subscribe": {
+            "title": "Ascolta ovunque",
+            "description": "Ascolta il podcast su Mixcloud",
+            "mixcloudButton": "Mixcloud"
+        }
+    },
+    "notFound": {
+        "title": "404",
+        "heading": "Pagina non trovata",
+        "description": "La pagina che stai cercando non esiste o è stata spostata.",
+        "homeButton": "Torna alla Home"
     }
 }
