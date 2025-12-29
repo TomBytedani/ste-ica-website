@@ -1,9 +1,13 @@
+"use client";
+
 import Link from "next/link";
 import { contactInfo, siteConfig } from "@/lib/constants";
 import { SocialLinks } from "@/components/ui/SocialLinks";
+import { useTranslations } from "next-intl";
 
 export function Footer() {
     const currentYear = new Date().getFullYear();
+    const t = useTranslations("footer");
 
     return (
         <footer className="bg-[var(--color-accent-primary)] text-white">
@@ -23,7 +27,7 @@ export function Footer() {
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="font-medium mb-4">Contatti</h3>
+                        <h3 className="font-medium mb-4">{t("contactTitle")}</h3>
                         <ul className="space-y-2 text-sm text-gray-300">
                             <li>
                                 <a
@@ -51,7 +55,7 @@ export function Footer() {
 
                     {/* Professional Info & Social */}
                     <div>
-                        <h3 className="font-medium mb-4">Info</h3>
+                        <h3 className="font-medium mb-4">{t("infoTitle")}</h3>
                         <p className="text-sm text-gray-300 mb-4">
                             {contactInfo.professional.registration}
                         </p>
@@ -65,7 +69,7 @@ export function Footer() {
                 {/* Copyright */}
                 <div className="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
                     <p>
-                        © {currentYear} {siteConfig.name}. Tutti i diritti riservati.
+                        © {currentYear} {siteConfig.name}. {t("copyright")}
                     </p>
                 </div>
             </div>
