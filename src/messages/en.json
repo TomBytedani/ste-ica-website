@@ -9,5 +9,58 @@
         "contactTitle": "Contact",
         "infoTitle": "Info",
         "copyright": "All rights reserved."
+    },
+    "chiSono": {
+        "hero": {
+            "title": "About Me",
+            "subtitle": "Clinical Psychologist · Psychotherapist in Training"
+        },
+        "intro": {
+            "name": "Dr. Stefano Icardi",
+            "badge1": "Clinical Psychologist",
+            "badge2": "Psychotherapist in Training",
+            "description1": "I provide psychological support and individual therapy for adults. My approach is relational, integrated, and personalized.",
+            "description2": "I am registered with the Order of Psychologists of Lombardy, Register A",
+            "contactButton": "Contact Me",
+            "cvButton": "Download CV"
+        },
+        "formazione": {
+            "title": "Education",
+            "degree": "Master's Degree in Clinical Psychology",
+            "university": "University of Milano-Bicocca",
+            "specialization": "Psychotherapy Specialization in Progress",
+            "school": "School of Specialization in Psychotherapy",
+            "registration": "Register A - Order of Psychologists of Lombardy",
+            "registrationNumber": "No. 22963"
+        },
+        "attivita": {
+            "title": "Practice",
+            "description1": "I provide psychological support and individual therapy for adults, with particular attention to relational dynamics and personal growth.",
+            "description2": "The therapeutic journey is focused on the individual with the aim of supporting them in processing critical moments in life that create distress and that they feel unable to manage independently.",
+            "description3": "In the process, we focus on the individual and how they face different situations (relationships, work, and daily life), with particular attention to relational dynamics, while enhancing and strengthening the resources they already possess."
+        },
+        "studio": {
+            "title": "The Practice",
+            "bookButton": "Book an Appointment",
+            "mapsButton": "View on Maps"
+        }
+    },
+    "articoli": {
+        "hero": {
+            "title": "Podcast",
+            "subtitle": "Reflections and insights on psychology and mental well-being",
+            "description": "In this podcast, I share thoughts and reflections on psychology, relationships, and personal growth. Short and accessible episodes to accompany you in your daily life."
+        },
+        "subscribe": {
+            "title": "Listen Anywhere",
+            "description": "Listen to the podcast on Mixcloud",
+            "mixcloudButton": "Mixcloud"
+        }
+    },
+    "notFound": {
+        "title": "404",
+        "heading": "Page Not Found",
+        "description": "The page you are looking for does not exist or has been moved.",
+        "homeButton": "Back to Home"
     }
 }
