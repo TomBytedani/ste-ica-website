@@ -1,25 +1,35 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
+import { useTranslations } from "next-intl";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { contactInfo } from "@/lib/constants";
 
-export const metadata: Metadata = {
-    title: "Chi Sono | Stefano Icardi Psicologo",
-    description:
-        "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico iscritto all'Ordine della Lombardia. Specializzando in Psicoterapia con approccio relazionale.",
-    openGraph: {
-        title: "Chi Sono | Stefano Icardi Psicologo",
-        description:
-            "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico a Milano.",
-        images: ["/images/og/chi-sono.jpg"],
-        locale: "it_IT",
-        type: "website",
-    },
+type Props = {
+    params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'metadata.chiSono' });
+
+    return {
+        title: t('title'),
+        description: t('description'),
+        openGraph: {
+            title: t('ogTitle'),
+            description: t('ogDescription'),
+            images: ["/images/og/chi-sono.jpg"],
+            locale: locale === 'it' ? 'it_IT' : 'en_US',
+            type: "website",
+        },
+    };
+}
+
 export default function ChiSonoPage() {
+    const t = useTranslations('chiSono');
     return (
         <>
             <Header />
@@ -42,10 +52,10 @@ export default function ChiSonoPage() {
                     {/* Hero Content */}
                     <div className="relative z-10 container-custom text-center text-white">
                         <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 drop-shadow-lg">
-                            Chi Sono
+                            {t('hero.title')}
                         </h1>
                         <p className="text-xl md:text-2xl font-light drop-shadow-md max-w-2xl mx-auto">
-                            {contactInfo.professional.title} · {contactInfo.professional.subtitle}
+                            {t('hero.subtitle')}
                         </p>
                     </div>
                 </section>
@@ -71,27 +81,25 @@ export default function ChiSonoPage() {
                                 {/* Intro Text */}
                                 <div className="flex-1">
                                     <h2 className="text-2xl md:text-3xl font-medium mb-4 text-[var(--color-text-primary)]">
-                                        Dott. Stefano Icardi
+                                        {t('intro.name')}
                                     </h2>
                                     <div className="flex flex-wrap gap-2 mb-6">
                                         <span className="px-3 py-1 bg-[var(--color-bg-accent)] rounded-full text-sm text-[var(--color-text-secondary)]">
-                                            Psicologo Clinico
+                                            {t('intro.badge1')}
                                         </span>
                                         <span className="px-3 py-1 bg-[var(--color-bg-accent)] rounded-full text-sm text-[var(--color-text-secondary)]">
-                                            Specializzando Psicoterapeuta
+                                            {t('intro.badge2')}
                                         </span>
                                     </div>
                                     <p className="text-lg text-[var(--color-text-secondary)] leading-relaxed mb-6">
-                                        Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti.
-                                        Il mio approccio è di tipo relazionale, integrato e personalizzato.
+                                        {t('intro.description1')}
                                     </p>
                                     <p className="text-[var(--color-text-secondary)] leading-relaxed mb-6">
-                                        Sono iscritto all&apos;Ordine degli Psicologi della Lombardia, Albo A
-                                        (iscrizione n. {contactInfo.professional.registration.match(/n\.\s*(\d+)/)?.[1]}).
+                                        {t('intro.description2')} (n. {contactInfo.professional.registration.match(/n\.\s*(\d+)/)?.[1]}).
                                     </p>
                                     <div className="flex gap-4">
                                         <Button href="/#contatti" variant="primary">
-                                            Contattami
+                                            {t('intro.contactButton')}
                                         </Button>
                                         <Button
                                             href="https://www.opl.it/iscritti/cv/CV-22963.pdf"
@@ -102,7 +110,7 @@ export default function ChiSonoPage() {
                                             <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                                             </svg>
-                                            Scarica CV
+                                            {t('intro.cvButton')}
                                         </Button>
                                     </div>
                                 </div>
@@ -119,7 +127,7 @@ export default function ChiSonoPage() {
                                         </svg>
                                     </div>
                                     <h2 className="text-2xl md:text-3xl font-medium text-[var(--color-text-primary)]">
-                                        Formazione
+                                        {t('formazione.title')}
                                     </h2>
                                 </div>
                                 <div className="bg-[var(--color-bg-secondary)] rounded-xl p-6 md:p-8">
@@ -128,10 +136,10 @@ export default function ChiSonoPage() {
                                             <div className="w-2 h-2 mt-2 bg-[var(--color-brand-sage)] rounded-full flex-shrink-0" />
                                             <div>
                                                 <p className="font-medium text-[var(--color-text-primary)]">
-                                                    Laurea Magistrale in Psicologia Clinica
+                                                    {t('formazione.degree')}
                                                 </p>
                                                 <p className="text-[var(--color-text-secondary)]">
-                                                    Università degli Studi di Milano-Bicocca
+                                                    {t('formazione.university')}
                                                 </p>
                                             </div>
                                         </li>
@@ -139,10 +147,10 @@ export default function ChiSonoPage() {
                                             <div className="w-2 h-2 mt-2 bg-[var(--color-brand-sage)] rounded-full flex-shrink-0" />
                                             <div>
                                                 <p className="font-medium text-[var(--color-text-primary)]">
-                                                    Specializzando in Psicoterapia
+                                                    {t('formazione.specialization')}
                                                 </p>
                                                 <p className="text-[var(--color-text-secondary)]">
-                                                    Scuola di Specializzazione in Psicoterapia
+                                                    {t('formazione.school')}
                                                 </p>
                                             </div>
                                         </li>
@@ -150,10 +158,10 @@ export default function ChiSonoPage() {
                                             <div className="w-2 h-2 mt-2 bg-[var(--color-brand-sage)] rounded-full flex-shrink-0" />
                                             <div>
                                                 <p className="font-medium text-[var(--color-text-primary)]">
-                                                    Iscrizione Albo A - Ordine degli Psicologi della Lombardia
+                                                    {t('formazione.registration')}
                                                 </p>
                                                 <p className="text-[var(--color-text-secondary)]">
-                                                    N. 22963
+                                                    {t('formazione.registrationNumber')}
                                                 </p>
                                             </div>
                                         </li>
@@ -170,23 +178,18 @@ export default function ChiSonoPage() {
                                         </svg>
                                     </div>
                                     <h2 className="text-2xl md:text-3xl font-medium text-[var(--color-text-primary)]">
-                                        Attività
+                                        {t('attivita.title')}
                                     </h2>
                                 </div>
                                 <div className="prose prose-lg max-w-none">
                                     <p className="text-[var(--color-text-secondary)] leading-relaxed mb-6">
-                                        Svolgo attività di supporto psicologico e percorsi individuali per adulti,
-                                        con particolare attenzione alle dinamiche relazionali e alla crescita personale.
+                                        {t('attivita.description1')}
                                     </p>
                                     <p className="text-[var(--color-text-secondary)] leading-relaxed mb-6">
-                                        Il percorso psicologico è incentrato sul singolo con la finalità di supportarlo
-                                        nella rielaborazione di momenti critici della vita che gli creano disagio,
-                                        e che si sente di non riuscire a gestire in autonomia.
+                                        {t('attivita.description2')}
                                     </p>
                                     <p className="text-[var(--color-text-secondary)] leading-relaxed">
-                                        Nel percorso ci si sofferma sul soggetto e su come affronta situazioni diverse
-                                        (relazioni, lavoro e vita quotidiana), con particolare attenzione alle dinamiche
-                                        relazionali, andando a valorizzare e potenziare le risorse che già possiede.
+                                        {t('attivita.description3')}
                                     </p>
                                 </div>
                             </div>
@@ -194,7 +197,7 @@ export default function ChiSonoPage() {
                             {/* Studio Section */}
                             <div className="bg-gradient-to-r from-[var(--color-bg-accent)] to-[var(--color-bg-secondary)] rounded-xl p-8 text-center">
                                 <h3 className="text-xl font-medium mb-4 text-[var(--color-text-primary)]">
-                                    Lo Studio
+                                    {t('studio.title')}
                                 </h3>
                                 <p className="text-[var(--color-text-secondary)] mb-2">
                                     {contactInfo.address.street}
@@ -204,7 +207,7 @@ export default function ChiSonoPage() {
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <Button href="/#contatti" variant="primary">
-                                        Prenota un appuntamento
+                                        {t('studio.bookButton')}
                                     </Button>
                                     <Button
                                         href={contactInfo.address.googleMapsUrl}
@@ -213,10 +216,10 @@ export default function ChiSonoPage() {
                                         rel="noopener noreferrer"
                                     >
                                         <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 11111.314 0z" />
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                         </svg>
-                                        Visualizza su Maps
+                                        {t('studio.mapsButton')}
                                     </Button>
                                 </div>
                             </div>

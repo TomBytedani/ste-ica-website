@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from 'next-intl';
-import { getMessages, setRequestLocale } from 'next-intl/server';
+import { getMessages, getTranslations, setRequestLocale } from 'next-intl/server';
 import { CookieConsent } from "@/components/ui/CookieConsent";
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
@@ -14,39 +14,32 @@ export function generateStaticParams() {
     return routing.locales.map((locale) => ({ locale }));
 }
 
-export function generateMetadata(): Metadata {
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'metadata' });
+
     return {
         title: {
-            default: "Stefano Icardi | Psicologo a Milano",
-            template: "%s | Stefano Icardi Psicologo",
+            default: t('homepage.title'),
+            template: t('homepage.titleTemplate'),
         },
-        description:
-            "Psicologo clinico a Milano. Supporto psicologico e percorsi individuali per adulti con approccio relazionale e personalizzato. Prenota un appuntamento.",
-        keywords: [
-            "psicologo",
-            "Milano",
-            "psicologo clinico",
-            "supporto psicologico",
-            "psicoterapia",
-            "Stefano Icardi",
-        ],
+        description: t('homepage.description'),
+        keywords: t.raw('keywords') as string[],
         authors: [{ name: "Stefano Icardi" }],
         creator: "Stefano Icardi",
         metadataBase: new URL("https://stefanoicardi.com"),
         openGraph: {
-            title: "Stefano Icardi | Psicologo a Milano",
-            description:
-                "Supporto psicologico e percorsi individuali per adulti con approccio relazionale.",
+            title: t('homepage.ogTitle'),
+            description: t('homepage.ogDescription'),
             url: "https://stefanoicardi.com",
-            siteName: "Stefano Icardi - Psicologo",
-            locale: "it_IT",
+            siteName: t('siteName'),
+            locale: locale === 'it' ? 'it_IT' : 'en_US',
             type: "website",
         },
         twitter: {
             card: "summary_large_image",
-            title: "Stefano Icardi | Psicologo a Milano",
-            description:
-                "Supporto psicologico e percorsi individuali per adulti con approccio relazionale.",
+            title: t('homepage.ogTitle'),
+            description: t('homepage.ogDescription'),
         },
         robots: {
             index: true,

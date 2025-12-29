@@ -1,8 +1,10 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
 export default function NotFound() {
+    const t = useTranslations('notFound');
     return (
         <>
             <Header />
@@ -11,15 +13,15 @@ export default function NotFound() {
                 className="min-h-screen flex items-center justify-center"
             >
                 <div className="container-custom text-center">
-                    <h1 className="text-6xl md:text-8xl font-medium mb-4">404</h1>
+                    <h1 className="text-6xl md:text-8xl font-medium mb-4">{t('title')}</h1>
                     <h2 className="text-2xl md:text-3xl font-medium mb-6">
-                        Pagina non trovata
+                        {t('heading')}
                     </h2>
                     <p className="text-lg text-[var(--color-text-secondary)] mb-8 max-w-md mx-auto">
-                        La pagina che stai cercando non esiste o è stata spostata.
+                        {t('description')}
                     </p>
                     <Link href="/" className="btn btn-primary">
-                        Torna alla Home
+                        {t('homeButton')}
                     </Link>
                 </div>
             </main>

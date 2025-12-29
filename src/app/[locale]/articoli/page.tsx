@@ -1,23 +1,33 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { getTranslations } from 'next-intl/server';
+import { useTranslations } from "next-intl";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 
-export const metadata: Metadata = {
-    title: "Podcast | Stefano Icardi Psicologo",
-    description:
-        "Ascolta il podcast di Stefano Icardi con riflessioni e approfondimenti su psicologia, relazioni e benessere mentale.",
-    openGraph: {
-        title: "Podcast | Stefano Icardi Psicologo",
-        description:
-            "Riflessioni e approfondimenti su psicologia, relazioni e benessere mentale.",
-        images: ["/images/podcast-cover.jpg"],
-        locale: "it_IT",
-        type: "website",
-    },
+type Props = {
+    params: Promise<{ locale: string }>;
 };
 
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'metadata.articoli' });
+
+    return {
+        title: t('title'),
+        description: t('description'),
+        openGraph: {
+            title: t('ogTitle'),
+            description: t('ogDescription'),
+            images: ["/images/podcast-cover.jpg"],
+            locale: locale === 'it' ? 'it_IT' : 'en_US',
+            type: "website",
+        },
+    };
+}
+
 export default function ArticoliPage() {
+    const t = useTranslations('articoli');
     return (
         <>
             <Header />
@@ -42,15 +52,13 @@ export default function ArticoliPage() {
                             {/* Hero Text */}
                             <div className="text-center lg:text-left">
                                 <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
-                                    Podcast
+                                    {t('hero.title')}
                                 </h1>
                                 <p className="text-xl md:text-2xl text-[var(--color-text-secondary)] mb-6">
-                                    Riflessioni e approfondimenti su psicologia e benessere mentale
+                                    {t('hero.subtitle')}
                                 </p>
                                 <p className="text-lg text-[var(--color-text-secondary)] max-w-xl mx-auto lg:mx-0">
-                                    In questo podcast condivido pensieri e riflessioni sui temi della
-                                    psicologia, delle relazioni e della crescita personale. Episodi
-                                    brevi e accessibili per accompagnarti nella tua quotidianità.
+                                    {t('hero.description')}
                                 </p>
                             </div>
                         </div>
@@ -77,9 +85,9 @@ export default function ArticoliPage() {
 
                         {/* Subscribe Section */}
                         <div className="mt-12 text-center">
-                            <h2 className="text-2xl font-medium mb-6">Ascolta ovunque</h2>
+                            <h2 className="text-2xl font-medium mb-6">{t('subscribe.title')}</h2>
                             <p className="text-[var(--color-text-secondary)] mb-8">
-                                Ascolta il podcast su Mixcloud
+                                {t('subscribe.description')}
                             </p>
                             <div className="flex flex-wrap justify-center gap-4">
                                 <a
@@ -91,7 +99,7 @@ export default function ArticoliPage() {
                                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
                                     </svg>
-                                    Mixcloud
+                                    {t('subscribe.mixcloudButton')}
                                 </a>
                             </div>
                         </div>
