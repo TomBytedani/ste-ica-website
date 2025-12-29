@@ -4,6 +4,7 @@ import Link from "next/link";
 import { navigation, siteConfig } from "@/lib/constants";
 import { useState } from "react";
 import { MobileNav } from "./MobileNav";
+import { LanguageSwitcher } from "@/components/ui";
 import { useTranslations } from "next-intl";
 
 export function Header() {
@@ -31,17 +32,21 @@ export function Header() {
                     </Link>
 
                     {/* Desktop Navigation */}
-                    <nav className="hidden md:flex items-center gap-8">
-                        {navigation.main.map((item) => (
-                            <Link
-                                key={item.name}
-                                href={item.href}
-                                className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
-                            >
-                                {t(getNavKey(item.name))}
-                            </Link>
-                        ))}
-                    </nav>
+                    <div className="hidden md:flex items-center gap-6">
+                        <nav className="flex items-center gap-8">
+                            {navigation.main.map((item) => (
+                                <Link
+                                    key={item.name}
+                                    href={item.href}
+                                    className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors"
+                                >
+                                    {t(getNavKey(item.name))}
+                                </Link>
+                            ))}
+                        </nav>
+                        {/* Language Switcher */}
+                        <LanguageSwitcher />
+                    </div>
 
                     {/* Mobile Menu Button */}
                     <button
