@@ -7,20 +7,27 @@
   --font-heading: 'Playfair Display', Georgia, serif;
   --font-body: 'Inter', system-ui, sans-serif;
 
-  /* Color Palette - Primary */
-  --color-text-primary: #1f2937;
-  --color-text-secondary: #4b5563;
+  /* Color Palette - Warm & Peculiar */
+  --color-text-primary: #2d2620;
+  /* Warm dark brown */
+  --color-text-secondary: #5c544d;
+  /* Medium brownish gray */
   --color-text-muted: #9ca3af;
 
   /* Background Colors */
-  --color-bg-primary: #ffffff;
-  --color-bg-secondary: #f9fafb;
-  --color-bg-accent: #fafaf9;
+  --color-bg-primary: #fffaf5;
+  /* Warm off-white */
+  --color-bg-secondary: #f5f0e6;
+  /* Sandy beige */
+  --color-bg-accent: #ebe5d9;
+  /* Darker beige for contrast */
 
   /* Accent Colors */
-  --color-accent-primary: #1a1a1a;
-  --color-accent-hover: #404040;
-  --color-focus-ring: #3b82f6;
+  --color-accent-primary: #e07a5f;
+  /* Terra Cotta */
+  --color-accent-hover: #c45d42;
+  /* Darker Terra Cotta */
+  --color-focus-ring: #e07a5f;
 
   /* Brand Colors - Nature-inspired */
   --color-brand-sage: #87a878;
@@ -216,16 +223,18 @@ footer a:hover {
   padding: 0.75rem 1rem;
   font-family: var(--font-body);
   font-size: 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.375rem;
-  background-color: white;
-  transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+  border: 2px solid var(--color-bg-accent);
+  border-radius: 1rem;
+  /* rounded-2xl equivalent approx */
+  background-color: var(--color-bg-primary);
+  transition: all 0.2s ease-in-out;
 }
 
 .form-input:focus {
   outline: none;
   border-color: var(--color-focus-ring);
-  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+  background-color: white;
+  box-shadow: 0 4px 6px -1px rgba(224, 122, 95, 0.1), 0 2px 4px -2px rgba(224, 122, 95, 0.1);
 }
 
 .form-input::placeholder {

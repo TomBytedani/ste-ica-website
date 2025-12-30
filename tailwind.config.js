@@ -13,23 +13,23 @@ module.exports = {
             },
             colors: {
                 text: {
-                    primary: "#1f2937",
-                    secondary: "#4b5563",
-                    muted: "#9ca3af",
+                    primary: "var(--color-text-primary)",
+                    secondary: "var(--color-text-secondary)",
+                    muted: "var(--color-text-muted)",
                 },
                 background: {
-                    primary: "#ffffff",
-                    secondary: "#f9fafb",
-                    accent: "#fafaf9",
+                    primary: "var(--color-bg-primary)",
+                    secondary: "var(--color-bg-secondary)",
+                    accent: "var(--color-bg-accent)",
                 },
                 accent: {
-                    primary: "#1a1a1a",
-                    hover: "#404040",
-                    ring: "#3b82f6",
+                    primary: "var(--color-accent-primary)",
+                    hover: "var(--color-accent-hover)",
+                    ring: "var(--color-focus-ring)",
                 },
                 brand: {
-                    sage: "#87a878",
-                    earth: "#8b7355",
+                    sage: "var(--color-brand-sage)",
+                    earth: "var(--color-brand-earth)",
                 },
             },
             container: {

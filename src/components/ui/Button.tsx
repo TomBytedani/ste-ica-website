@@ -1,4 +1,4 @@
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import type { ButtonProps } from "@/lib/types";
 
@@ -16,7 +16,7 @@ export function Button({
     children,
 }: ButtonProps) {
     const baseStyles =
-        "btn inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus-ring)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none";
+        "btn inline-flex items-center justify-center font-medium transition-all duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--color-focus-ring)] focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none hover:-translate-y-0.5 active:translate-y-0";
 
     const variantClasses = {
         primary: "btn-primary",
@@ -27,19 +27,19 @@ export function Button({
 
     const variants = {
         primary:
-            "bg-[var(--color-accent-primary)] text-white hover:bg-[var(--color-accent-hover)] border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)]",
+            "bg-[var(--color-accent-primary)] text-white hover:bg-[var(--color-accent-hover)] border-2 border-[var(--color-accent-primary)] hover:border-[var(--color-accent-hover)] shadow-sm hover:shadow-md",
         secondary:
             "bg-transparent text-[var(--color-accent-primary)] border-2 border-[var(--color-accent-primary)] hover:bg-[var(--color-accent-primary)] hover:text-white",
         outline:
-            "bg-transparent text-[var(--color-text-primary)] border border-gray-300 hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)]",
+            "bg-transparent text-[var(--color-text-primary)] border-2 border-[var(--color-bg-accent)] hover:border-[var(--color-accent-primary)] hover:text-[var(--color-accent-primary)]",
         ghost:
-            "bg-transparent text-[var(--color-text-primary)] hover:bg-gray-100",
+            "bg-transparent text-[var(--color-text-primary)] hover:bg-[var(--color-bg-secondary)]",
     };
 
     const sizes = {
-        sm: "px-4 py-2 text-sm rounded",
-        md: "px-6 py-3 text-base rounded-md",
-        lg: "px-8 py-4 text-lg rounded-lg",
+        sm: "px-4 py-2 text-sm rounded-xl",
+        md: "px-6 py-3 text-base rounded-2xl",
+        lg: "px-8 py-4 text-lg rounded-3xl",
     };
 
     const classes = cn(baseStyles, variantClasses[variant], variants[variant], sizes[size], className);

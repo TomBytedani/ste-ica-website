@@ -37,8 +37,9 @@ export default function ArticoliPage() {
                     <div className="container-custom">
                         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                             {/* Podcast Cover */}
-                            <div className="flex justify-center">
-                                <div className="relative w-full max-w-sm aspect-square rounded-xl overflow-hidden shadow-lg">
+                            <div className="flex justify-center relative">
+                                <div className="absolute inset-0 bg-[var(--color-accent-primary)] rounded-[2rem_4rem_2rem_4rem] rotate-3 opacity-10 scale-105" />
+                                <div className="relative w-full max-w-sm aspect-square rounded-[2rem_4rem_2rem_4rem] overflow-hidden shadow-lg rotate-[-1deg] hover:rotate-0 transition-transform duration-500">
                                     <Image
                                         src="/images/podcast-cover.jpg"
                                         alt="Podcast di Stefano Icardi"
@@ -51,13 +52,13 @@ export default function ArticoliPage() {
 
                             {/* Hero Text */}
                             <div className="text-center lg:text-left">
-                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-6">
+                                <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium mb-6 text-[var(--color-text-primary)]">
                                     {t('hero.title')}
                                 </h1>
-                                <p className="text-xl md:text-2xl text-[var(--color-text-secondary)] mb-6">
+                                <p className="text-xl md:text-2xl font-heading text-[var(--color-text-secondary)] mb-6 italic">
                                     {t('hero.subtitle')}
                                 </p>
-                                <p className="text-lg text-[var(--color-text-secondary)] max-w-xl mx-auto lg:mx-0">
+                                <p className="text-lg text-[var(--color-text-secondary)] max-w-xl mx-auto lg:mx-0 leading-relaxed">
                                     {t('hero.description')}
                                 </p>
                             </div>
@@ -68,7 +69,7 @@ export default function ArticoliPage() {
                 {/* Podcast Embed Section */}
                 <section className="section">
                     <div className="container-custom max-w-4xl">
-                        <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+                        <div className="bg-white rounded-3xl shadow-sm overflow-hidden border border-[var(--color-bg-accent)]">
                             {/* Mixcloud Embed - Palombari 23 Psicologia */}
                             <div className="w-full">
                                 <iframe
@@ -85,7 +86,7 @@ export default function ArticoliPage() {
 
                         {/* Subscribe Section */}
                         <div className="mt-12 text-center">
-                            <h2 className="text-2xl font-medium mb-6">{t('subscribe.title')}</h2>
+                            <h2 className="text-2xl font-heading font-medium mb-6 text-[var(--color-text-primary)]">{t('subscribe.title')}</h2>
                             <p className="text-[var(--color-text-secondary)] mb-8">
                                 {t('subscribe.description')}
                             </p>
@@ -94,7 +95,7 @@ export default function ArticoliPage() {
                                     href="https://www.mixcloud.com/Palombari/palombari-23-psicologia/"
                                     target="_blank"
                                     rel="noopener noreferrer"
-                                    className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent-primary)] text-white rounded-lg hover:bg-[var(--color-accent-hover)] transition-colors"
+                                    className="inline-flex items-center gap-2 px-6 py-3 bg-[var(--color-accent-primary)] text-white rounded-2xl hover:bg-[var(--color-accent-hover)] transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5"
                                 >
                                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />

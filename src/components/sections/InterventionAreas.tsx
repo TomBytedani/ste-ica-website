@@ -29,9 +29,9 @@ export function InterventionAreas() {
                     {areas.map((area, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-lg p-4 text-center shadow-sm hover:shadow-md transition-shadow"
+                            className="bg-[var(--color-bg-primary)] border border-[var(--color-bg-accent)] rounded-tr-3xl rounded-bl-3xl rounded-tl-lg rounded-br-lg p-6 text-center shadow-sm hover:shadow-md transition-all hover:-translate-y-1"
                         >
-                            <p className="font-medium text-[var(--color-text-primary)]">
+                            <p className="font-medium text-lg text-[var(--color-text-primary)]">
                                 {area}
                             </p>
                         </div>

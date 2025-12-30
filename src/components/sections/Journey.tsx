@@ -28,8 +28,11 @@ export function Journey() {
                     </div>
 
                     {/* Image */}
-                    <div className="hidden lg:block">
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                    <div className="hidden lg:block relative">
+                        {/* Decorative Blob */}
+                        <div className="absolute inset-0 bg-[var(--color-bg-accent)] rounded-[3rem_6rem_4rem_5rem] rotate-3 opacity-60 scale-105" />
+
+                        <div className="relative aspect-[4/3] rounded-[3rem_6rem_4rem_5rem] overflow-hidden shadow-lg rotate-[-1deg] hover:rotate-0 transition-transform duration-500">
                             <Image
                                 src="/images/decorative/walkway-pier.png"
                                 alt="Pontile sul lago - simbolo del percorso interiore"

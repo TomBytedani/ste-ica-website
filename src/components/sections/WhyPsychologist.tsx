@@ -12,8 +12,11 @@ export function WhyPsychologist() {
             <div className="container-custom">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                     {/* Image */}
-                    <div className="order-2 lg:order-1">
-                        <div className="relative aspect-[4/3] rounded-2xl overflow-hidden shadow-lg">
+                    <div className="order-2 lg:order-1 relative">
+                        {/* Decorative Blob */}
+                        <div className="absolute inset-0 bg-[var(--color-brand-sage)] rounded-[4rem_2rem_6rem_3rem] rotate-[-3deg] opacity-20 scale-105" />
+
+                        <div className="relative aspect-[4/3] rounded-[4rem_2rem_6rem_3rem] overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
                             <Image
                                 src="/images/decorative/tree-nature.webp"
                                 alt="Albero nella natura - simbolo di crescita e radicamento"

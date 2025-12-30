@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { navigation, siteConfig } from "@/lib/constants";
 import { useState } from "react";
 import { MobileNav } from "./MobileNav";

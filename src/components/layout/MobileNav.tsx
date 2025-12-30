@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import { Link } from "@/i18n/navigation";
 import { navigation } from "@/lib/constants";
 import { LanguageSwitcher } from "@/components/ui";
 import { useTranslations } from "next-intl";

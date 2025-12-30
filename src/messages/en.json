@@ -166,5 +166,40 @@
         "heading": "Page Not Found",
         "description": "The page you are looking for does not exist or has been moved.",
         "homeButton": "Back to Home"
+    },
+    "metadata": {
+        "siteName": "Stefano Icardi - Psychologist",
+        "siteTitle": "Stefano Icardi | Psychologist in Milan",
+        "homepage": {
+            "title": "Stefano Icardi | Psychologist in Milan",
+            "titleTemplate": "%s | Stefano Icardi Psychologist",
+            "description": "Clinical psychologist in Milan. Psychological support and individual therapy for adults with a relational and personalized approach. Book an appointment.",
+            "ogTitle": "Stefano Icardi | Psychologist in Milan",
+            "ogDescription": "Psychological support and individual therapy for adults with a relational approach."
+        },
+        "chiSono": {
+            "title": "About Me",
+            "description": "Discover the education and professional experience of Dr. Stefano Icardi, clinical psychologist registered with the Order of Lombardy. Psychotherapy specialist in training with a relational approach.",
+            "ogTitle": "About Me | Stefano Icardi Psychologist",
+            "ogDescription": "Discover the education and professional experience of Dr. Stefano Icardi, clinical psychologist in Milan."
+        },
+        "articoli": {
+            "title": "Podcast",
+            "description": "Listen to Stefano Icardi's podcast with reflections and insights on psychology, relationships, and mental well-being.",
+            "ogTitle": "Podcast | Stefano Icardi Psychologist",
+            "ogDescription": "Reflections and insights on psychology, relationships, and mental well-being."
+        },
+        "notFound": {
+            "title": "Page Not Found",
+            "description": "The page you are looking for does not exist or has been moved. Return to the homepage to continue browsing."
+        },
+        "keywords": [
+            "psychologist",
+            "Milan",
+            "clinical psychologist",
+            "psychological support",
+            "psychotherapy",
+            "Stefano Icardi"
+        ]
     }
 }

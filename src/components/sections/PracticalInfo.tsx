@@ -92,7 +92,7 @@ export function PracticalInfo() {
                     {infoItems.map((item) => (
                         <div
                             key={item.titleKey}
-                            className="group bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                            className="group bg-[var(--color-bg-primary)] border border-[var(--color-bg-accent)] rounded-3xl p-6 md:p-8 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                         >
                             {/* Icon */}
                             <div className="w-14 h-14 bg-[var(--color-bg-accent)] rounded-full flex items-center justify-center text-[var(--color-accent-primary)] mb-5 group-hover:bg-[var(--color-accent-primary)] group-hover:text-white transition-colors duration-300">
