@@ -1,5 +1,4 @@
 import { Playfair_Display, Inter } from "next/font/google";
-import PlausibleProvider from "next-plausible";
 import "./globals.css";
 
 const playfairDisplay = Playfair_Display({
@@ -23,12 +22,6 @@ export default function RootLayout({
 }>) {
     return (
         <html className={`${playfairDisplay.variable} ${inter.variable}`}>
-            <head>
-                <PlausibleProvider
-                    domain="stefanoicardi.com"
-                    enabled={process.env.NODE_ENV === "production"}
-                />
-            </head>
             <body className="antialiased">{children}</body>
         </html>
     );

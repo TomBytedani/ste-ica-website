@@ -2,13 +2,11 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { usePlausible } from "next-plausible";
 import { Button } from "./Button";
 import type { ContactFormData, ContactFormState } from "@/lib/types";
 
 export function ContactForm() {
     const t = useTranslations("contactForm");
-    const plausible = usePlausible();
     const [formData, setFormData] = useState<ContactFormData>({
         nome: "",
         email: "",
@@ -39,9 +37,6 @@ export function ContactForm() {
             });
 
             if (!response.ok) throw new Error("Errore durante l'invio");
-
-            // Track successful form submission
-            plausible("contact-form-submit");
 
             setState({
                 status: "success",
