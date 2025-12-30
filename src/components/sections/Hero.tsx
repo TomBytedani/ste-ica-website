@@ -9,7 +9,6 @@ export function Hero() {
     const t = useTranslations("homepage.hero");
 
     return (
-    return (
         <section className="section relative overflow-hidden bg-[var(--color-bg-secondary)] pb-20 pt-28 lg:pt-32">
             {/* Organic Background Blobs */}
             <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-[var(--color-bg-accent)] rounded-full mix-blend-multiply filter blur-3xl opacity-70 animate-blob" />
