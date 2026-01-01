@@ -70,7 +70,7 @@ export function LanguageSwitcher() {
                     />
 
                     {/* Dropdown */}
-                    <div className="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-20">
+                    <div className="absolute left-0 md:left-auto md:right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-100 py-1 z-20">
                         {availableLanguages.map((lang) => (
                             <button
                                 key={lang}
