@@ -19,9 +19,9 @@ export function Footer() {
                             {siteConfig.name}
                         </Link>
                         <p className="mt-3 text-sm text-white/80">
-                            {contactInfo.professional.title}
+                            {t("professionalTitle")}
                             <br />
-                            {contactInfo.professional.subtitle}
+                            {t("professionalSubtitle")}
                         </p>
                     </div>
 

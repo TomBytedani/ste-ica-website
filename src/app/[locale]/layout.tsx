@@ -68,11 +68,12 @@ export default async function LocaleLayout({ children, params }: Props) {
 
     // Providing all messages to the client side is the easiest way to get started
     const messages = await getMessages();
+    const t = await getTranslations({ locale, namespace: 'accessibility' });
 
     return (
         <NextIntlClientProvider messages={messages}>
             <a href="#main-content" className="skip-to-content">
-                Vai al contenuto principale
+                {t('skipToContent')}
             </a>
             {children}
             <CookieConsent />

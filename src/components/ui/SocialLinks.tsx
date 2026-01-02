@@ -1,4 +1,5 @@
 import { contactInfo } from "@/lib/constants";
+import { useTranslations } from "next-intl";
 
 interface SocialLinksProps {
     size?: "sm" | "md" | "lg";
@@ -11,6 +12,7 @@ export function SocialLinks({
     variant = "default",
     className = "",
 }: SocialLinksProps) {
+    const t = useTranslations("accessibility");
     const sizeClasses = {
         sm: "w-8 h-8",
         md: "w-10 h-10",
@@ -78,7 +80,7 @@ export function SocialLinks({
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`${sizeClasses[size]} rounded-full flex items-center justify-center ${variantClasses[variant]}`}
-                    aria-label={`Seguimi su ${link.name}`}
+                    aria-label={link.name === "Instagram" ? t("followInstagram") : t("followLinkedIn")}
                 >
                     {link.icon}
                 </a>

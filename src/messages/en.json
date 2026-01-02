@@ -69,7 +69,9 @@
     "footer": {
         "contactTitle": "Contact",
         "infoTitle": "Info",
-        "copyright": "All rights reserved."
+        "copyright": "All rights reserved.",
+        "professionalTitle": "Clinical Psychologist",
+        "professionalSubtitle": "Psychotherapist in Training"
     },
     "contact": {
         "title": "Contact Me",
@@ -81,6 +83,7 @@
         "phoneLabel": "Phone",
         "openInMaps": "Open in Google Maps",
         "whatsappButton": "Message me on WhatsApp",
+        "whatsappMessage": "Good morning Dr. Icardi, I would like to request information about an appointment.",
         "followSocial": "Follow me on social media"
     },
     "contactForm": {
@@ -113,6 +116,11 @@
         "readMore": "Read More",
         "backToHome": "Back to Home",
         "contact": "Contact Me"
+    },
+    "accessibility": {
+        "skipToContent": "Skip to main content",
+        "followInstagram": "Follow me on Instagram",
+        "followLinkedIn": "Follow me on LinkedIn"
     },
     "chiSono": {
         "hero": {

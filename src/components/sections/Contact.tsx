@@ -11,7 +11,8 @@ export function Contact() {
     const t = useTranslations("contact");
     // Format phone for WhatsApp (remove spaces and +)
     const whatsappPhone = contactInfo.phone.replace(/[\s+]/g, "");
-    const whatsappUrl = `https://wa.me/${whatsappPhone}?text=Buongiorno%20Dott.%20Icardi,%20vorrei%20richiedere%20informazioni%20per%20un%20appuntamento.`;
+    const whatsappMessage = encodeURIComponent(t("whatsappMessage"));
+    const whatsappUrl = `https://wa.me/${whatsappPhone}?text=${whatsappMessage}`;
 
     return (
         <section id="contatti" className="section bg-[var(--color-bg-secondary)]">

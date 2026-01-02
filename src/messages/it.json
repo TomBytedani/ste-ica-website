@@ -69,7 +69,9 @@
     "footer": {
         "contactTitle": "Contatti",
         "infoTitle": "Info",
-        "copyright": "Tutti i diritti riservati."
+        "copyright": "Tutti i diritti riservati.",
+        "professionalTitle": "Psicologo clinico",
+        "professionalSubtitle": "Specializzando Psicoterapeuta"
     },
     "contact": {
         "title": "Contattami",
@@ -81,6 +83,7 @@
         "phoneLabel": "Telefono",
         "openInMaps": "Apri in Google Maps",
         "whatsappButton": "Scrivimi su WhatsApp",
+        "whatsappMessage": "Buongiorno Dott. Icardi, vorrei richiedere informazioni per un appuntamento.",
         "followSocial": "Seguimi sui social"
     },
     "contactForm": {
@@ -113,6 +116,11 @@
         "readMore": "Leggi di più",
         "backToHome": "Torna alla home",
         "contact": "Contattami"
+    },
+    "accessibility": {
+        "skipToContent": "Vai al contenuto principale",
+        "followInstagram": "Seguimi su Instagram",
+        "followLinkedIn": "Seguimi su LinkedIn"
     },
     "chiSono": {
         "hero": {
