@@ -1,0 +1,26 @@
+{
+    "feedInfo": {
+        "title": "Palombari 23 - Psicologia",
+        "description": "Podcast in collaborazione con la Radio del Politecnico di Milano",
+        "mixcloudFeed": "/Palombari/palombari-23-psicologia/",
+        "coverImage": "/images/podcast-cover.jpg"
+    },
+    "episodes": [
+        {
+            "title": "Palombari 23 - Psicologia",
+            "description": "Nonostante le piadine con i falafel e il kebab c'entrino poco con la psicologia, il nostro ospite Stefano ha fatto da anello di congiunzione tra le due cose aiutandoci a dare vita a questa puntata su uno dei temi più dibattuti - e meno affrontati - della nostra epoca. La psicologia è una scienza, non è magia.",
+            "mixcloudUrl": "https://www.mixcloud.com/Palombari/palombari-23-psicologia/",
+            "publishedAt": "2023-01-02",
+            "duration": "55:27",
+            "featured": true,
+            "id": "ep-1767397251090"
+        }
+    ],
+    "subscribeLinks": [
+        {
+            "platform": "Mixcloud",
+            "href": "https://www.mixcloud.com/Palombari/palombari-23-psicologia/",
+            "icon": "mixcloud"
+        }
+    ]
+}

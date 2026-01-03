@@ -204,6 +204,17 @@ footer a:hover {
   color: white;
 }
 
+/* Admin sidebar link styles - ensure visibility on dark background */
+aside.bg-gray-900 a,
+[class*="bg-gray-900"] a {
+  color: white;
+}
+
+aside.bg-gray-900 a:hover,
+[class*="bg-gray-900"] a:hover {
+  color: #d1d5db;
+}
+
 /* Card styles */
 .card {
   background-color: var(--color-bg-primary);

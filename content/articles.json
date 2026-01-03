@@ -1,0 +1,76 @@
+{
+    "articles": [
+        {
+            "slug": "la-pazienza",
+            "title": {
+                "it": "Titolo in Italian",
+                "en": "Titolo in inglese"
+            },
+            "excerpt": {
+                "it": "Estratto ion intaliano",
+                "en": "Estratto in inglese"
+            },
+            "content": {
+                "it": "Contenuto lunghissimo",
+                "en": "Verrrry long content"
+            },
+            "coverImage": "/images/articles/chi-sono-forest-path.png",
+            "publishedAt": "2026-01-02",
+            "tags": [
+                "tag-di-prova-1",
+                "secondo-tag",
+                "ansia"
+            ],
+            "published": true,
+            "id": "article-1767376984615"
+        },
+        {
+            "id": "article-001",
+            "slug": "gestione-ansia-quotidiana",
+            "title": {
+                "it": "Come gestire l'ansia nella vita quotidiana",
+                "en": "How to manage anxiety in daily life"
+            },
+            "excerpt": {
+                "it": "Strategie pratiche per affrontare i momenti di ansia e ritrovare la serenità nella routine quotidiana.",
+                "en": "Practical strategies to face moments of anxiety and find serenity in your daily routine."
+            },
+            "content": {
+                "it": "L'ansia è una risposta naturale del nostro corpo allo stress, ma quando diventa eccessiva può interferire con la nostra vita quotidiana. In questo articolo esploreremo alcune strategie pratiche per gestire l'ansia...",
+                "en": "Anxiety is a natural response of our body to stress, but when it becomes excessive it can interfere with our daily life. In this article we will explore some practical strategies to manage anxiety..."
+            },
+            "coverImage": "/images/articles/ansia.webp",
+            "publishedAt": "2024-01-20",
+            "tags": [
+                "ansia",
+                "benessere",
+                "strategie"
+            ],
+            "published": true
+        },
+        {
+            "id": "article-002",
+            "slug": "importanza-del-sonno",
+            "title": {
+                "it": "L'importanza del sonno per la salute mentale",
+                "en": "The importance of sleep for mental health"
+            },
+            "excerpt": {
+                "it": "Scopri come un buon riposo notturno può influenzare positivamente il tuo benessere psicologico.",
+                "en": "Discover how good night's rest can positively influence your psychological well-being."
+            },
+            "content": {
+                "it": "Il sonno è fondamentale per il nostro benessere psicologico. Durante il riposo notturno, il nostro cervello elabora le esperienze della giornata e consolida i ricordi...",
+                "en": "Sleep is fundamental to our psychological well-being. During night rest, our brain processes the day's experiences and consolidates memories..."
+            },
+            "coverImage": "/images/articles/sonno.jpg",
+            "publishedAt": "2024-02-15",
+            "tags": [
+                "sonno",
+                "salute mentale",
+                "benessere"
+            ],
+            "published": false
+        }
+    ]
+}
