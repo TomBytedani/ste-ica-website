@@ -38,7 +38,8 @@ export const navigation = {
     main: [
         { name: "Home", href: "/" },
         { name: "Chi Sono", href: "/chi-sono" },
-        { name: "Articoli", href: "/articoli" },
+        { name: "Podcast", href: "/podcast" },
+        { name: "Articoli", href: "/articoli", conditional: true },
         { name: "Contatti", href: "/#contatti" },
     ],
 };

@@ -2,8 +2,8 @@
     "homepage": {
         "hero": {
             "title": "Stefano Icardi",
-            "subtitle": "Psicologo Clinico",
-            "subtitleExtended": "Psicologo Clinico · Specializzando Psicoterapeuta",
+            "subtitle": "Psicologo e Psicoterapeuta",
+            "subtitleExtended": "Psicologo e Psicoterapeuta specializzato in Psicoterapia Psicoanalitica Individuale",
             "description": "Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti. Il mio approccio è di tipo relazionale, integrato e personalizzato.",
             "ctaPrimary": "Scrivimi",
             "ctaSecondary": "Scopri di più",
@@ -63,6 +63,7 @@
     "navigation": {
         "home": "Home",
         "about": "Chi Sono",
+        "podcast": "Podcast",
         "articles": "Articoli",
         "contact": "Contatti"
     },
@@ -70,8 +71,8 @@
         "contactTitle": "Contatti",
         "infoTitle": "Info",
         "copyright": "Tutti i diritti riservati.",
-        "professionalTitle": "Psicologo clinico",
-        "professionalSubtitle": "Specializzando Psicoterapeuta"
+        "professionalTitle": "Psicologo e Psicoterapeuta",
+        "professionalSubtitle": "Specializzato in Psicoterapia Psicoanalitica Individuale"
     },
     "contact": {
         "title": "Contattami",
@@ -125,12 +126,12 @@
     "chiSono": {
         "hero": {
             "title": "Chi Sono",
-            "subtitle": "Psicologo Clinico · Specializzando Psicoterapeuta"
+            "subtitle": "Psicologo e Psicoterapeuta specializzato in Psicoterapia Psicoanalitica Individuale"
         },
         "intro": {
             "name": "Dott. Stefano Icardi",
-            "badge1": "Psicologo Clinico",
-            "badge2": "Specializzando Psicoterapeuta",
+            "badge1": "Psicologo e Psicoterapeuta",
+            "badge2": "Specializzato in Psicoterapia Psicoanalitica Individuale",
             "description1": "Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti. Il mio approccio è di tipo relazionale, integrato e personalizzato.",
             "description2": "Sono iscritto all'Ordine degli Psicologi della Lombardia, Albo A",
             "contactButton": "Contattami",
@@ -138,18 +139,24 @@
         },
         "formazione": {
             "title": "Formazione",
-            "degree": "Laurea Magistrale in Psicologia Clinica",
-            "university": "Università degli Studi di Milano-Bicocca",
-            "specialization": "Specializzando in Psicoterapia",
-            "school": "Scuola di Specializzazione in Psicoterapia",
+            "degree": "Laurea Magistrale in Psicologia Clinica e Promozione della Salute",
+            "university": "Università Cattolica del Sacro Cuore",
+            "specialization": "Specializzazione in Psicoterapia Gruppoanalitica",
+            "school": "COIRAG (Confederazione di Organizzazioni Italiane per la Ricerca Analitica sui Gruppi), Milano",
             "registration": "Iscrizione Albo A - Ordine degli Psicologi della Lombardia",
             "registrationNumber": "N. 22963"
         },
+        "areaFormativa": {
+            "title": "Area Formativa",
+            "description1": "Mi sono laureato in Psicologia Clinica e Promozione della Salute all'Università Cattolica del Sacro Cuore a pieni voti, discutendo una tesi sul Disturbo di Personalità Borderline e Trattamento con la mentalizzazione (MBT), basata sull'osservazione di colloqui e di incontri di gruppo, presso il CPS di Pavia.",
+            "description2": "Mi sono specializzato il 21 dicembre 2025 in Psicoterapia Gruppoanalitica presso la scuola di specializzazione COIRAG (Confederazione di Organizzazioni Italiane per la Ricerca Analitica sui Gruppi) a Milano. Sto svolgendo un Master in Psicodiagnostica presso l'ARP (Studio Associato di Psicologia Clinica) grazie il quale sto apprendendo diversi Test, tra i quali il Rorschach, TAT, l'MMPI, WISC e WAIS, che utilizzo nella mia attività clinica.",
+            "description3": "Durante il mio periodo formativo ho svolto diversi tirocini nell'ambito delle dipendenze, in particolare cito l'esperienza presso lo \"Studio Galimberti\", il quale offre un servizio all'avanguardia che integra neuroscienze con l'utilizzo della TMS (Stimolazione Magnetica Transcranica) e percorsi psicologici osservando attività cliniche, colloqui e partecipando alle supervisioni d'équipe svolte da psicoterapeuti esperti del CART (Centro Assistenza e Ricerca Tossicodipendenze). Ho svolto, inoltre, un tirocinio presso un SER.D di Milano, dove ho avuto la possibilità di seguire vari pazienti individualmente e di condurre un gruppo. La mia ultima attività di tirocinio si è svolta presso un CPS di Milano, dove ho seguito individualmente pazienti con diagnosi psichiatriche di varia natura."
+        },
         "attivita": {
-            "title": "Attività",
-            "description1": "Svolgo attività di supporto psicologico e percorsi individuali per adulti, con particolare attenzione alle dinamiche relazionali e alla crescita personale.",
-            "description2": "Il percorso psicologico è incentrato sul singolo con la finalità di supportarlo nella rielaborazione di momenti critici della vita che gli creano disagio, e che si sente di non riuscire a gestire in autonomia.",
-            "description3": "Nel percorso ci si sofferma sul soggetto e su come affronta situazioni diverse (relazioni, lavoro e vita quotidiana), con particolare attenzione alle dinamiche relazionali, andando a valorizzare e potenziare le risorse che già possiede."
+            "title": "Attività Lavorative",
+            "description1": "Dal 2021 lavoro con TELUS Health Italia, una piattaforma del territorio nazionale, per promuovere il benessere aziendale, sostenendo psicologicamente i dipendenti aziendali e le loro famiglie.",
+            "description2": "Dal 2023, collaboro con il Centro Medico Santagostino, nel quale svolgo percorsi psicologici individuali rivolti ad adulti. In particolare, faccio parte dell'Equipe dipendenze dove mi occupo della valutazione e del trattamento di soggetti con dipendenza, sia da sostanze che comportamentali.",
+            "description3": "Svolgo inoltre attività di supporto e consulenza psicologica direttamente presso il mio studio in Milano, Viale Luigi Majno, 38."
         },
         "studio": {
             "title": "Lo Studio",
@@ -158,6 +165,11 @@
         }
     },
     "articoli": {
+        "emptyTitle": "Articoli in arrivo",
+        "emptyDescription": "Presto pubblicherò articoli e approfondimenti su psicologia, benessere e crescita personale.",
+        "podcastLink": "Nel frattempo, ascolta il mio podcast"
+    },
+    "podcast": {
         "hero": {
             "title": "Podcast",
             "subtitle": "Riflessioni e approfondimenti su psicologia e benessere mentale",
@@ -192,6 +204,12 @@
             "ogDescription": "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico a Milano."
         },
         "articoli": {
+            "title": "Articoli",
+            "description": "Leggi gli articoli di Stefano Icardi su psicologia, benessere e crescita personale.",
+            "ogTitle": "Articoli | Stefano Icardi Psicologo",
+            "ogDescription": "Approfondimenti su psicologia, benessere e crescita personale."
+        },
+        "podcast": {
             "title": "Podcast",
             "description": "Ascolta il podcast di Stefano Icardi con riflessioni e approfondimenti su psicologia, relazioni e benessere mentale.",
             "ogTitle": "Podcast | Stefano Icardi Psicologo",

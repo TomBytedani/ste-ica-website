@@ -9,17 +9,23 @@ import { useEffect } from "react";
 interface MobileNavProps {
     isOpen: boolean;
     onClose: () => void;
+    hasArticles?: boolean;
 }
 
-export function MobileNav({ isOpen, onClose }: MobileNavProps) {
+export function MobileNav({ isOpen, onClose, hasArticles = true }: MobileNavProps) {
     const t = useTranslations('navigation');
 
     const navLabels: Record<string, string> = {
         'Home': t('home'),
         'Chi Sono': t('about'),
+        'Podcast': t('podcast'),
         'Articoli': t('articles'),
         'Contatti': t('contact'),
     };
+
+    const visibleNav = navigation.main.filter(
+        (item) => !('conditional' in item && item.conditional) || hasArticles
+    );
 
     // Close on escape key
     useEffect(() => {
@@ -56,7 +62,7 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
                 aria-label="Menu principale"
             >
                 <ul className="container-custom py-4 space-y-2">
-                    {navigation.main.map((item) => (
+                    {visibleNav.map((item) => (
                         <li key={item.name}>
                             <Link
                                 href={item.href}

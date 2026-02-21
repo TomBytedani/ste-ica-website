@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getTranslations } from 'next-intl/server';
-import { Header } from "@/components/layout/Header";
+import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 import { getArticlesData, Article } from "@/lib/articles";
 
@@ -75,7 +75,7 @@ export default async function ArticlePage({ params }: Props) {
 
     return (
         <>
-            <Header />
+            <ServerAwareHeader />
             <main id="main-content" className="min-h-screen">
                 {/* Hero Section with Cover Image */}
                 <section className="relative">

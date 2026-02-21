@@ -2,8 +2,8 @@
     "homepage": {
         "hero": {
             "title": "Stefano Icardi",
-            "subtitle": "Clinical Psychologist",
-            "subtitleExtended": "Clinical Psychologist · Psychotherapist in Training",
+            "subtitle": "Psychologist and Psychotherapist",
+            "subtitleExtended": "Psychologist and Psychotherapist specialized in Individual Psychoanalytic Psychotherapy",
             "description": "I provide psychological support and individual therapy for adults. My approach is relational, integrated, and personalized.",
             "ctaPrimary": "Contact Me",
             "ctaSecondary": "Learn More",
@@ -63,6 +63,7 @@
     "navigation": {
         "home": "Home",
         "about": "About",
+        "podcast": "Podcast",
         "articles": "Articles",
         "contact": "Contact"
     },
@@ -70,8 +71,8 @@
         "contactTitle": "Contact",
         "infoTitle": "Info",
         "copyright": "All rights reserved.",
-        "professionalTitle": "Clinical Psychologist",
-        "professionalSubtitle": "Psychotherapist in Training"
+        "professionalTitle": "Psychologist and Psychotherapist",
+        "professionalSubtitle": "Specialized in Individual Psychoanalytic Psychotherapy"
     },
     "contact": {
         "title": "Contact Me",
@@ -125,12 +126,12 @@
     "chiSono": {
         "hero": {
             "title": "About Me",
-            "subtitle": "Clinical Psychologist · Psychotherapist in Training"
+            "subtitle": "Psychologist and Psychotherapist specialized in Individual Psychoanalytic Psychotherapy"
         },
         "intro": {
             "name": "Dr. Stefano Icardi",
-            "badge1": "Clinical Psychologist",
-            "badge2": "Psychotherapist in Training",
+            "badge1": "Psychologist and Psychotherapist",
+            "badge2": "Specialized in Individual Psychoanalytic Psychotherapy",
             "description1": "I provide psychological support and individual therapy for adults. My approach is relational, integrated, and personalized.",
             "description2": "I am registered with the Order of Psychologists of Lombardy, Register A",
             "contactButton": "Contact Me",
@@ -138,18 +139,24 @@
         },
         "formazione": {
             "title": "Education",
-            "degree": "Master's Degree in Clinical Psychology",
-            "university": "University of Milano-Bicocca",
-            "specialization": "Psychotherapy Specialization in Progress",
-            "school": "School of Specialization in Psychotherapy",
+            "degree": "Master's Degree in Clinical Psychology and Health Promotion",
+            "university": "Università Cattolica del Sacro Cuore",
+            "specialization": "Specialization in Group-Analytic Psychotherapy",
+            "school": "COIRAG (Confederazione di Organizzazioni Italiane per la Ricerca Analitica sui Gruppi), Milan",
             "registration": "Register A - Order of Psychologists of Lombardy",
             "registrationNumber": "No. 22963"
         },
+        "areaFormativa": {
+            "title": "Educational Background",
+            "description1": "I graduated with full marks in Clinical Psychology and Health Promotion from the Università Cattolica del Sacro Cuore, with a thesis on Borderline Personality Disorder and Mentalization-Based Treatment (MBT), based on the observation of interviews and group sessions at the CPS of Pavia.",
+            "description2": "I completed my specialization on 21 December 2025 in Group-Analytic Psychotherapy at the COIRAG (Confederazione di Organizzazioni Italiane per la Ricerca Analitica sui Gruppi) school in Milan. I am currently completing a Master's in Psychodiagnostics at ARP (Studio Associato di Psicologia Clinica), through which I am learning various assessment tools including the Rorschach, TAT, MMPI, WISC and WAIS, which I apply in my clinical practice.",
+            "description3": "During my training I completed several internships in the field of addiction. Notably, I worked at Studio Galimberti, which offers a cutting-edge service integrating neuroscience with TMS (Transcranial Magnetic Stimulation) and psychological pathways. I also completed an internship at a SER.D in Milan, where I followed various patients individually and conducted group sessions. My final internship took place at a CPS in Milan, where I worked individually with patients with various psychiatric diagnoses."
+        },
         "attivita": {
-            "title": "Practice",
-            "description1": "I provide psychological support and individual therapy for adults, with particular attention to relational dynamics and personal growth.",
-            "description2": "The therapeutic journey is focused on the individual with the aim of supporting them in processing critical moments in life that create distress and that they feel unable to manage independently.",
-            "description3": "In the process, we focus on the individual and how they face different situations (relationships, work, and daily life), with particular attention to relational dynamics, while enhancing and strengthening the resources they already possess."
+            "title": "Work Experience",
+            "description1": "Since 2021 I have been working with TELUS Health Italia, a national platform, to promote corporate well-being by providing psychological support to employees and their families.",
+            "description2": "Since 2023, I collaborate with Centro Medico Santagostino, where I conduct individual psychological sessions for adults. In particular, I am part of the Addiction Team, where I focus on the assessment and treatment of individuals with addictions, both substance-related and behavioral.",
+            "description3": "I also provide psychological support and consultancy directly at my practice in Milan, Viale Luigi Majno, 38."
         },
         "studio": {
             "title": "The Practice",
@@ -158,6 +165,11 @@
         }
     },
     "articoli": {
+        "emptyTitle": "Articles coming soon",
+        "emptyDescription": "I will soon be publishing articles and insights on psychology, well-being, and personal growth.",
+        "podcastLink": "In the meantime, listen to my podcast"
+    },
+    "podcast": {
         "hero": {
             "title": "Podcast",
             "subtitle": "Reflections and insights on psychology and mental well-being",
@@ -192,6 +204,12 @@
             "ogDescription": "Discover the education and professional experience of Dr. Stefano Icardi, clinical psychologist in Milan."
         },
         "articoli": {
+            "title": "Articles",
+            "description": "Read Stefano Icardi's articles on psychology, well-being, and personal growth.",
+            "ogTitle": "Articles | Stefano Icardi Psychologist",
+            "ogDescription": "Insights on psychology, well-being, and personal growth."
+        },
+        "podcast": {
             "title": "Podcast",
             "description": "Listen to Stefano Icardi's podcast with reflections and insights on psychology, relationships, and mental well-being.",
             "ogTitle": "Podcast | Stefano Icardi Psychologist",

@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
 import { useTranslations } from "next-intl";
-import { Header } from "@/components/layout/Header";
+import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { contactInfo } from "@/lib/constants";
@@ -32,29 +32,59 @@ export default function ChiSonoPage() {
     const t = useTranslations('chiSono');
     return (
         <>
-            <Header />
+            <ServerAwareHeader />
             <main id="main-content">
-                {/* Hero Section with Background Image */}
+                {/* Hero Section — Gradient Banner */}
                 <section className="relative h-[50vh] min-h-[400px] max-h-[600px] flex items-center justify-center overflow-hidden">
-                    {/* Background Image */}
-                    <div className="absolute inset-0">
-                        <Image
-                            src="/images/heroes/chi-sono-forest-path.png"
-                            alt="Sentiero nel bosco"
-                            fill
-                            className="object-cover"
-                            priority
-                        />
-                        {/* Gradient Overlay */}
-                        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50" />
-                    </div>
+                    {/* Base gradient: deep warm brown → earth tone */}
+                    <div
+                        className="absolute inset-0"
+                        style={{ background: 'linear-gradient(150deg, #1a110c 0%, #2d2620 45%, #6b4c35 100%)' }}
+                    />
 
-                    {/* Hero Content */}
-                    <div className="relative z-10 container-custom text-center text-white">
-                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-medium mb-4 drop-shadow-lg">
+                    {/* Terracotta radial glow — upper right */}
+                    <div
+                        className="absolute -top-32 -right-32 w-[520px] h-[520px] rounded-full"
+                        style={{
+                            background: 'radial-gradient(circle, rgba(224,122,95,0.45) 0%, transparent 65%)',
+                            filter: 'blur(40px)',
+                        }}
+                    />
+
+                    {/* Sage accent glow — lower left */}
+                    <div
+                        className="absolute -bottom-20 -left-20 w-80 h-80 rounded-full"
+                        style={{
+                            background: 'radial-gradient(circle, rgba(135,168,120,0.3) 0%, transparent 70%)',
+                            filter: 'blur(48px)',
+                        }}
+                    />
+
+                    {/* Soft central stage — lifts the text area */}
+                    <div
+                        className="absolute inset-0"
+                        style={{ background: 'radial-gradient(ellipse 60% 55% at 50% 50%, rgba(92,68,53,0.35) 0%, transparent 75%)' }}
+                    />
+
+                    {/* Subtle vignette edges */}
+                    <div
+                        className="absolute inset-0"
+                        style={{ background: 'radial-gradient(ellipse 100% 100% at 50% 50%, transparent 50%, rgba(20,12,8,0.5) 100%)' }}
+                    />
+
+                    {/* Content */}
+                    <div className="relative z-10 container-custom text-center">
+                        {/* Decorative ornament */}
+                        <div className="flex items-center justify-center gap-3 mb-6">
+                            <div className="h-px w-10" style={{ background: 'rgba(224,122,95,0.65)' }} />
+                            <div className="w-1.5 h-1.5 rounded-full" style={{ background: 'rgba(224,122,95,0.8)' }} />
+                            <div className="h-px w-10" style={{ background: 'rgba(224,122,95,0.65)' }} />
+                        </div>
+
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-medium mb-5 tracking-wide" style={{ color: 'var(--color-accent-primary)' }}>
                             {t('hero.title')}
                         </h1>
-                        <p className="text-xl md:text-2xl font-light drop-shadow-md max-w-2xl mx-auto">
+                        <p className="text-lg md:text-xl font-light max-w-2xl mx-auto leading-relaxed tracking-wide" style={{ color: 'rgba(255,250,245,0.8)' }}>
                             {t('hero.subtitle')}
                         </p>
                     </div>
@@ -104,7 +134,7 @@ export default function ChiSonoPage() {
                                         </Button>
                                         <Button
                                             href="https://www.opl.it/iscritti/cv/CV-22963.pdf"
-                                            variant="outline"
+                                            variant="secondary"
                                             target="_blank"
                                             rel="noopener noreferrer"
                                         >
@@ -170,7 +200,32 @@ export default function ChiSonoPage() {
                                 </div>
                             </div>
 
-                            {/* Attività Section */}
+                            {/* Area Formativa Section */}
+                            <div className="mb-16">
+                                <div className="flex items-center gap-4 mb-6">
+                                    <div className="w-12 h-12 bg-[var(--color-bg-accent)] rounded-full flex items-center justify-center">
+                                        <svg className="w-6 h-6 text-[var(--color-accent-primary)]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.746 0 3.332.477 4.5 1.253v13C19.832 18.477 18.246 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+                                        </svg>
+                                    </div>
+                                    <h2 className="text-2xl md:text-3xl font-heading font-medium text-[var(--color-text-primary)]">
+                                        {t('areaFormativa.title')}
+                                    </h2>
+                                </div>
+                                <div className="prose prose-lg max-w-none">
+                                    <p className="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+                                        {t('areaFormativa.description1')}
+                                    </p>
+                                    <p className="text-[var(--color-text-secondary)] leading-relaxed mb-6">
+                                        {t('areaFormativa.description2')}
+                                    </p>
+                                    <p className="text-[var(--color-text-secondary)] leading-relaxed">
+                                        {t('areaFormativa.description3')}
+                                    </p>
+                                </div>
+                            </div>
+
+                            {/* Attività Lavorative Section */}
                             <div className="mb-16">
                                 <div className="flex items-center gap-4 mb-6">
                                     <div className="w-12 h-12 bg-[var(--color-bg-accent)] rounded-full flex items-center justify-center">
@@ -212,7 +267,7 @@ export default function ChiSonoPage() {
                                     </Button>
                                     <Button
                                         href={contactInfo.address.googleMapsUrl}
-                                        variant="outline"
+                                        variant="secondary"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                     >

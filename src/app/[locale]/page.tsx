@@ -1,4 +1,4 @@
-import { Header } from "@/components/layout/Header";
+import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { WhyPsychologist } from "@/components/sections/WhyPsychologist";
@@ -12,7 +12,7 @@ export default function Home() {
     return (
         <>
             <SEO />
-            <Header />
+            <ServerAwareHeader />
             <main id="main-content">
                 <Hero />
                 <WhyPsychologist />

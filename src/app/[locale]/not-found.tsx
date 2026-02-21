@@ -1,15 +1,13 @@
-"use client";
-
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
-import { Header } from "@/components/layout/Header";
+import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 
-export default function NotFound() {
-    const t = useTranslations('notFound');
+export default async function NotFound() {
+    const t = await getTranslations('notFound');
     return (
         <>
-            <Header />
+            <ServerAwareHeader />
             <main
                 id="main-content"
                 className="min-h-screen flex items-center justify-center"

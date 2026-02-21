@@ -32,6 +32,10 @@
     "resend": "^6.6.0",
     "typescript": "^5.9.3"
   },
+  "overrides": {
+    "minimatch": "^10.2.1",
+    "ajv": "^8.18.0"
+  },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.3",
     "@tailwindcss/postcss": "^4.1.18",

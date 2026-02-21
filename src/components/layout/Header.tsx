@@ -7,15 +7,24 @@ import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "@/components/ui";
 import { useTranslations } from "next-intl";
 
-export function Header() {
+interface HeaderProps {
+    hasArticles?: boolean;
+}
+
+export function Header({ hasArticles = true }: HeaderProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const t = useTranslations("navigation");
+
+    const visibleNav = navigation.main.filter(
+        (item) => !('conditional' in item && item.conditional) || hasArticles
+    );
 
     // Map navigation keys to translation keys
     const getNavKey = (name: string) => {
         const keyMap: { [key: string]: string } = {
             "Home": "home",
             "Chi Sono": "about",
+            "Podcast": "podcast",
             "Articoli": "articles",
             "Contatti": "contact"
         };
@@ -34,7 +43,7 @@ export function Header() {
                     {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center gap-6">
                         <nav className="flex items-center gap-8">
-                            {navigation.main.map((item) => (
+                            {visibleNav.map((item) => (
                                 <Link
                                     key={item.name}
                                     href={item.href}
@@ -84,6 +93,7 @@ export function Header() {
             <MobileNav
                 isOpen={isMobileMenuOpen}
                 onClose={() => setIsMobileMenuOpen(false)}
+                hasArticles={hasArticles}
             />
         </header>
     );
