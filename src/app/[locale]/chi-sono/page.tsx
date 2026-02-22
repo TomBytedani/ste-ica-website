@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import { getTranslations } from 'next-intl/server';
-import { useTranslations } from "next-intl";
 import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
 import { contactInfo } from "@/lib/constants";
+import { getSettings } from "@/lib/settings";
+
+export const dynamic = 'force-dynamic';
 
 type Props = {
     params: Promise<{ locale: string }>;
@@ -28,8 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
 }
 
-export default function ChiSonoPage() {
-    const t = useTranslations('chiSono');
+export default async function ChiSonoPage({ params }: Props) {
+    const { locale } = await params;
+    const t = await getTranslations({ locale, namespace: 'chiSono' });
+    const settings = await getSettings();
     return (
         <>
             <ServerAwareHeader />
@@ -97,7 +101,7 @@ export default function ChiSonoPage() {
                             {/* Intro with Profile Image */}
                             <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start mb-16">
                                 {/* Profile Image */}
-                                <div className="w-full md:w-1/3 flex-shrink-0 relative">
+                                <div className="w-full md:w-1/3 flex-shrink-0 relative overflow-hidden">
                                     <div className="absolute inset-0 bg-[var(--color-bg-accent)] rounded-[3rem_5rem_4rem_6rem] rotate-3 opacity-60 scale-105" />
                                     <div className="relative aspect-[3/4] rounded-[3rem_5rem_4rem_6rem] overflow-hidden shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                                         <Image
@@ -133,7 +137,7 @@ export default function ChiSonoPage() {
                                             {t('intro.contactButton')}
                                         </Button>
                                         <Button
-                                            href="https://www.opl.it/iscritti/cv/CV-22963.pdf"
+                                            href={settings.cv.url}
                                             variant="secondary"
                                             target="_blank"
                                             rel="noopener noreferrer"
@@ -256,17 +260,17 @@ export default function ChiSonoPage() {
                                     {t('studio.title')}
                                 </h3>
                                 <p className="text-[var(--color-text-secondary)] mb-2">
-                                    {contactInfo.address.street}
+                                    {settings.studio.street}
                                 </p>
                                 <p className="text-[var(--color-text-secondary)] mb-6">
-                                    {contactInfo.address.postalCode} {contactInfo.address.city}, {contactInfo.address.province}
+                                    {settings.studio.postalCode} {settings.studio.city}, {settings.studio.province}
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                                     <Button href="/#contatti" variant="primary">
                                         {t('studio.bookButton')}
                                     </Button>
                                     <Button
-                                        href={contactInfo.address.googleMapsUrl}
+                                        href={settings.studio.googleMapsUrl}
                                         variant="secondary"
                                         target="_blank"
                                         rel="noopener noreferrer"

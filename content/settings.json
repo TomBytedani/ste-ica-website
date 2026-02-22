@@ -1,0 +1,21 @@
+{
+    "cv": {
+        "url": "https://www.opl.it/iscritti/cv/CV-22963.pdf",
+        "isCustom": false
+    },
+    "studio": {
+        "street": "Viale Luigi Majno, 38",
+        "city": "Milano",
+        "postalCode": "20129",
+        "province": "MI",
+        "googleMapsUrl": "https://www.google.com/maps/search/?api=1&query=45.4733096,9.2056856",
+        "coordinates": {
+            "lat": 45.4733481,
+            "lng": 9.2035648
+        }
+    },
+    "contact": {
+        "phone": "+39 334 1397960",
+        "email": "stefano.icardi@outlook.com"
+    }
+}

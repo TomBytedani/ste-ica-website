@@ -6,7 +6,7 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
             {/* Sidebar */}
             <aside className="w-64 bg-gray-900 text-white">
                 <div className="p-4 border-b border-gray-700">
-                    <h1 className="text-xl font-bold">Admin Panel</h1>
+                    <h1 className="text-xl font-bold" style={{ color: 'white' }}>Admin Panel</h1>
                 </div>
                 <nav className="p-4">
                     <ul className="space-y-2">
@@ -23,6 +23,11 @@ export default function AdminLayout({ children }: { children: React.ReactNode })
                         <li>
                             <Link href="/admin/articles" className="block px-4 py-2 rounded text-white hover:bg-gray-800">
                                 Articoli
+                            </Link>
+                        </li>
+                        <li>
+                            <Link href="/admin/impostazioni" className="block px-4 py-2 rounded text-white hover:bg-gray-800">
+                                Impostazioni
                             </Link>
                         </li>
                     </ul>

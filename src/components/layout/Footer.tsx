@@ -1,78 +1,12 @@
-"use client";
+import { getSettings } from "@/lib/settings";
+import { FooterClient } from "./FooterClient";
 
-import { Link } from "@/i18n/navigation";
-import { contactInfo, siteConfig } from "@/lib/constants";
-import { SocialLinks } from "@/components/ui/SocialLinks";
-import { useTranslations } from "next-intl";
-
-export function Footer() {
-    const currentYear = new Date().getFullYear();
-    const t = useTranslations("footer");
-
+export async function Footer() {
+    const settings = await getSettings();
     return (
-        <footer className="bg-[var(--color-accent-primary)] text-white">
-            <div className="container-custom py-12 md:py-16">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-                    {/* Brand */}
-                    <div>
-                        <Link href="/" className="font-heading text-xl font-medium">
-                            {siteConfig.name}
-                        </Link>
-                        <p className="mt-3 text-sm text-white/80">
-                            {t("professionalTitle")}
-                            <br />
-                            {t("professionalSubtitle")}
-                        </p>
-                    </div>
-
-                    {/* Contact Info */}
-                    <div>
-                        <h3 className="font-medium mb-4">{t("contactTitle")}</h3>
-                        <ul className="space-y-2 text-sm text-white/80">
-                            <li>
-                                <a
-                                    href={`mailto:${contactInfo.email}`}
-                                    className="hover:text-white transition-colors"
-                                >
-                                    {contactInfo.email}
-                                </a>
-                            </li>
-                            <li>
-                                <a
-                                    href={`tel:${contactInfo.phone.replace(/\s/g, "")}`}
-                                    className="hover:text-white transition-colors"
-                                >
-                                    {contactInfo.phone}
-                                </a>
-                            </li>
-                            <li className="pt-2">
-                                {contactInfo.address.street}
-                                <br />
-                                {contactInfo.address.postalCode} {contactInfo.address.city}
-                            </li>
-                        </ul>
-                    </div>
-
-                    {/* Professional Info & Social */}
-                    <div>
-                        <h3 className="font-medium mb-4">{t("infoTitle")}</h3>
-                        <p className="text-sm text-white/80 mb-4">
-                            {contactInfo.professional.registration}
-                        </p>
-                        <p className="text-sm text-white/80 mb-4">
-                            P.IVA {contactInfo.professional.vatNumber}
-                        </p>
-                        <SocialLinks variant="light" />
-                    </div>
-                </div>
-
-                {/* Copyright */}
-                <div className="border-t border-white/20 mt-8 pt-8 text-center text-sm text-white/60">
-                    <p>
-                        © {currentYear} {siteConfig.name}. {t("copyright")}
-                    </p>
-                </div>
-            </div>
-        </footer>
+        <FooterClient
+            contact={settings.contact}
+            studio={settings.studio}
+        />
     );
 }
