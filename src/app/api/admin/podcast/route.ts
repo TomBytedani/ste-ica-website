@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { getPodcastData, addEpisode, updateEpisode, deleteEpisode } from '@/lib/podcast';
 
+export const dynamic = 'force-dynamic';
+
 // GET - List all episodes
 export async function GET() {
     try {

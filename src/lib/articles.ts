@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache';
 import { readContent, writeContent } from './content-store';
 
 export interface LocalizedString {
@@ -22,6 +23,7 @@ export interface ArticlesData {
 }
 
 export async function getArticlesData(): Promise<ArticlesData> {
+    noStore();
     const content = await readContent('articles.json');
     if (!content) return { articles: [] };
     return JSON.parse(content);

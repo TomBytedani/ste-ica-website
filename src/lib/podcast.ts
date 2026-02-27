@@ -1,3 +1,4 @@
+import { unstable_noStore as noStore } from 'next/cache';
 import { readContent, writeContent } from './content-store';
 
 export interface Episode {
@@ -27,6 +28,7 @@ export interface PodcastData {
 }
 
 export async function getPodcastData(): Promise<PodcastData> {
+    noStore();
     const content = await readContent('podcast.json');
     if (!content) return { feedInfo: { title: '', description: '', mixcloudFeed: '', coverImage: '' }, episodes: [], subscribeLinks: [] };
     return JSON.parse(content);

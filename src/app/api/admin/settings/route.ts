@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { getSettings, saveSettings, SiteSettings } from '@/lib/settings';
 
+export const dynamic = 'force-dynamic';
+
 export async function GET() {
     try {
         const settings = await getSettings();

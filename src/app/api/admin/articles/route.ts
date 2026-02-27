@@ -2,6 +2,8 @@ import { NextResponse } from 'next/server';
 import { revalidatePath } from 'next/cache';
 import { getArticlesData, addArticle, updateArticle, deleteArticle } from '@/lib/articles';
 
+export const dynamic = 'force-dynamic';
+
 // GET - List all articles
 export async function GET() {
     try {
