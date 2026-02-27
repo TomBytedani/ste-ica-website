@@ -1,7 +1,4 @@
-import fs from 'fs/promises';
-import path from 'path';
-
-const PODCAST_FILE = path.join(process.cwd(), 'content', 'podcast.json');
+import { readContent, writeContent } from './content-store';
 
 export interface Episode {
     id: string;
@@ -30,12 +27,13 @@ export interface PodcastData {
 }
 
 export async function getPodcastData(): Promise<PodcastData> {
-    const content = await fs.readFile(PODCAST_FILE, 'utf-8');
+    const content = await readContent('podcast.json');
+    if (!content) return { feedInfo: { title: '', description: '', mixcloudFeed: '', coverImage: '' }, episodes: [], subscribeLinks: [] };
     return JSON.parse(content);
 }
 
 export async function savePodcastData(data: PodcastData): Promise<void> {
-    await fs.writeFile(PODCAST_FILE, JSON.stringify(data, null, 4), 'utf-8');
+    await writeContent('podcast.json', JSON.stringify(data, null, 4));
 }
 
 export async function addEpisode(episode: Omit<Episode, 'id'>): Promise<Episode> {

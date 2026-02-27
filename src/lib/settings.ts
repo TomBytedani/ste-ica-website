@@ -1,8 +1,5 @@
-import fs from 'fs/promises';
-import path from 'path';
 import { unstable_noStore as noStore } from 'next/cache';
-
-const SETTINGS_FILE = path.join(process.cwd(), 'content', 'settings.json');
+import { readContent, writeContent } from './content-store';
 
 export interface CVSettings {
     url: string;
@@ -51,7 +48,8 @@ const DEFAULT_SETTINGS: SiteSettings = {
 export async function getSettings(): Promise<SiteSettings> {
     noStore();
     try {
-        const content = await fs.readFile(SETTINGS_FILE, 'utf-8');
+        const content = await readContent('settings.json');
+        if (!content) return DEFAULT_SETTINGS;
         const parsed = JSON.parse(content);
         // Deep merge with defaults to handle missing keys
         return {
@@ -72,5 +70,5 @@ export async function getSettings(): Promise<SiteSettings> {
 }
 
 export async function saveSettings(settings: SiteSettings): Promise<void> {
-    await fs.writeFile(SETTINGS_FILE, JSON.stringify(settings, null, 4), 'utf-8');
+    await writeContent('settings.json', JSON.stringify(settings, null, 4));
 }

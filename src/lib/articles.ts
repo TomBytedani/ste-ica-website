@@ -1,7 +1,4 @@
-import fs from 'fs/promises';
-import path from 'path';
-
-const ARTICLES_FILE = path.join(process.cwd(), 'content', 'articles.json');
+import { readContent, writeContent } from './content-store';
 
 export interface LocalizedString {
     it: string;
@@ -25,12 +22,13 @@ export interface ArticlesData {
 }
 
 export async function getArticlesData(): Promise<ArticlesData> {
-    const content = await fs.readFile(ARTICLES_FILE, 'utf-8');
+    const content = await readContent('articles.json');
+    if (!content) return { articles: [] };
     return JSON.parse(content);
 }
 
 export async function saveArticlesData(data: ArticlesData): Promise<void> {
-    await fs.writeFile(ARTICLES_FILE, JSON.stringify(data, null, 4), 'utf-8');
+    await writeContent('articles.json', JSON.stringify(data, null, 4));
 }
 
 export async function addArticle(article: Omit<Article, 'id'>): Promise<Article> {
