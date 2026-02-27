@@ -11,17 +11,13 @@ const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN;
 export async function readContent(key: string): Promise<string | null> {
     if (useBlob) {
         try {
-            const { list } = await import('@vercel/blob');
-            const { blobs } = await list({
-                prefix: `content/${key}`,
-                limit: 1,
+            const { get } = await import('@vercel/blob');
+            const blob = await get(`content/${key}`, {
+                access: 'private',
                 token: process.env.BLOB_READ_WRITE_TOKEN!,
             });
-            if (blobs.length > 0) {
-                const response = await fetch(blobs[0].url);
-                if (response.ok) {
-                    return await response.text();
-                }
+            if (blob && blob.stream) {
+                return new Response(blob.stream).text();
             }
         } catch {
             // Blob not found or error — fall through to local file
@@ -45,7 +41,7 @@ export async function writeContent(key: string, data: string): Promise<void> {
     if (useBlob) {
         const { put } = await import('@vercel/blob');
         await put(`content/${key}`, data, {
-            access: 'public',
+            access: 'private',
             addRandomSuffix: false,
             token: process.env.BLOB_READ_WRITE_TOKEN!,
             contentType: 'application/json',

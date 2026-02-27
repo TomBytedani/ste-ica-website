@@ -24,13 +24,14 @@ export async function POST(request: Request) {
 
         if (useBlob) {
             const { put } = await import('@vercel/blob');
-            const blob = await put('cv-upload.pdf', buffer, {
-                access: 'public',
+            await put('cv-upload.pdf', buffer, {
+                access: 'private',
                 addRandomSuffix: false,
                 token: process.env.BLOB_READ_WRITE_TOKEN!,
                 contentType: 'application/pdf',
             });
-            cvUrl = blob.url;
+            // Serve via our own API route since the blob is private
+            cvUrl = '/api/admin/cv/download';
         } else {
             const filesDir = path.join(process.cwd(), 'public', 'files');
             await mkdir(filesDir, { recursive: true });
