@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getPodcastData, addEpisode, updateEpisode, deleteEpisode } from '@/lib/podcast';
 
 // GET - List all episodes
@@ -20,6 +21,7 @@ export async function POST(request: Request) {
     try {
         const body = await request.json();
         const episode = await addEpisode(body);
+        revalidatePath('/[locale]/podcast', 'page');
         return NextResponse.json(episode, { status: 201 });
     } catch (error) {
         console.error('Error creating episode:', error);
@@ -41,6 +43,7 @@ export async function PUT(request: Request) {
                 { status: 404 }
             );
         }
+        revalidatePath('/[locale]/podcast', 'page');
         return NextResponse.json(episode);
     } catch (error) {
         console.error('Error updating episode:', error);
@@ -62,6 +65,7 @@ export async function DELETE(request: Request) {
                 { status: 404 }
             );
         }
+        revalidatePath('/[locale]/podcast', 'page');
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error('Error deleting episode:', error);

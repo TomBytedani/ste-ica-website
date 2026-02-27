@@ -1,4 +1,5 @@
 import { NextResponse } from 'next/server';
+import { revalidatePath } from 'next/cache';
 import { getArticlesData, addArticle, updateArticle, deleteArticle } from '@/lib/articles';
 
 // GET - List all articles
@@ -20,6 +21,7 @@ export async function POST(request: Request) {
     try {
         const body = await request.json();
         const article = await addArticle(body);
+        revalidatePath('/[locale]/articoli', 'page');
         return NextResponse.json(article, { status: 201 });
     } catch (error) {
         console.error('Error creating article:', error);
@@ -41,6 +43,7 @@ export async function PUT(request: Request) {
                 { status: 404 }
             );
         }
+        revalidatePath('/[locale]/articoli', 'layout');
         return NextResponse.json(article);
     } catch (error) {
         console.error('Error updating article:', error);
@@ -62,6 +65,7 @@ export async function DELETE(request: Request) {
                 { status: 404 }
             );
         }
+        revalidatePath('/[locale]/articoli', 'layout');
         return NextResponse.json({ success: true });
     } catch (error) {
         console.error('Error deleting article:', error);
