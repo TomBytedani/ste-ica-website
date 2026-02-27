@@ -43,6 +43,7 @@ export async function writeContent(key: string, data: string): Promise<void> {
         await put(`content/${key}`, data, {
             access: 'private',
             addRandomSuffix: false,
+            allowOverwrite: true,
             token: process.env.BLOB_READ_WRITE_TOKEN!,
             contentType: 'application/json',
         });
