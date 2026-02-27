@@ -83,8 +83,7 @@
         "emailLabel": "Email",
         "phoneLabel": "Phone",
         "openInMaps": "Open in Google Maps",
-        "whatsappButton": "Message me on WhatsApp",
-        "whatsappMessage": "Good morning Dr. Icardi, I would like to request information about an appointment.",
+        "scrollToForm": "Fill in the contact form",
         "followSocial": "Follow me on social media"
     },
     "contactForm": {

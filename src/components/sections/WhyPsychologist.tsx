@@ -18,8 +18,8 @@ export function WhyPsychologist() {
 
                         <div className="relative aspect-[4/3] rounded-[4rem_2rem_6rem_3rem] overflow-hidden shadow-xl rotate-2 hover:rotate-0 transition-transform duration-500">
                             <Image
-                                src="/images/decorative/tree-nature.webp"
-                                alt="Albero nella natura - simbolo di crescita e radicamento"
+                                src="/images/decorative/blurred-profile.jpg"
+                                alt="Silhouette sfocata - immagine rappresentativa"
                                 fill
                                 className="object-cover"
                             />

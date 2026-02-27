@@ -83,8 +83,7 @@
         "emailLabel": "Email",
         "phoneLabel": "Telefono",
         "openInMaps": "Apri in Google Maps",
-        "whatsappButton": "Scrivimi su WhatsApp",
-        "whatsappMessage": "Buongiorno Dott. Icardi, vorrei richiedere informazioni per un appuntamento.",
+        "scrollToForm": "Compila il modulo di contatto",
         "followSocial": "Seguimi sui social"
     },
     "contactForm": {
