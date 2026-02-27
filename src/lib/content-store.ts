@@ -15,6 +15,7 @@ export async function readContent(key: string): Promise<string | null> {
             const blob = await get(`content/${key}`, {
                 access: 'private',
                 token: process.env.BLOB_READ_WRITE_TOKEN!,
+                useCache: false,
             });
             if (blob && blob.stream) {
                 return new Response(blob.stream).text();
