@@ -11,13 +11,17 @@ const useBlob = !!process.env.BLOB_READ_WRITE_TOKEN;
 export async function readContent(key: string): Promise<string | null> {
     if (useBlob) {
         try {
-            const { head } = await import('@vercel/blob');
-            const blobInfo = await head(`content/${key}`, {
+            const { list } = await import('@vercel/blob');
+            const { blobs } = await list({
+                prefix: `content/${key}`,
+                limit: 1,
                 token: process.env.BLOB_READ_WRITE_TOKEN!,
             });
-            const response = await fetch(blobInfo.url);
-            if (response.ok) {
-                return await response.text();
+            if (blobs.length > 0) {
+                const response = await fetch(blobs[0].url);
+                if (response.ok) {
+                    return await response.text();
+                }
             }
         } catch {
             // Blob not found or error — fall through to local file
