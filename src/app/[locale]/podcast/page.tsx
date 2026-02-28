@@ -5,6 +5,8 @@ import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 import { getPodcastData, Episode, PodcastData } from "@/lib/podcast";
 
+export const dynamic = 'force-dynamic';
+
 type Props = {
     params: Promise<{ locale: string }>;
 };

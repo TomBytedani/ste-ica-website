@@ -6,6 +6,8 @@ import { ServerAwareHeader } from "@/components/layout/ServerAwareHeader";
 import { Footer } from "@/components/layout/Footer";
 import { getArticlesData, Article } from "@/lib/articles";
 
+export const dynamic = 'force-dynamic';
+
 type Props = {
     params: Promise<{ locale: string }>;
 };
