@@ -34,8 +34,8 @@ export function Journey() {
 
                         <div className="relative aspect-[4/3] rounded-[3rem_6rem_4rem_5rem] overflow-hidden shadow-lg rotate-[-1deg] hover:rotate-0 transition-transform duration-500">
                             <Image
-                                src="/images/decorative/walkway-pier.png"
-                                alt="Pontile sul lago - simbolo del percorso interiore"
+                                src="/images/decorative/tree-nature.webp"
+                                alt="Rami di albero - simbolo del percorso interiore"
                                 fill
                                 className="object-cover"
                             />
