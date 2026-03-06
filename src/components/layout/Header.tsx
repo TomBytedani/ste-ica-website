@@ -6,6 +6,7 @@ import { useState } from "react";
 import { MobileNav } from "./MobileNav";
 import { LanguageSwitcher } from "@/components/ui";
 import { useTranslations } from "next-intl";
+import { usePathname } from "next/navigation";
 
 interface HeaderProps {
     hasArticles?: boolean;
@@ -14,6 +15,9 @@ interface HeaderProps {
 export function Header({ hasArticles = true }: HeaderProps) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
     const t = useTranslations("navigation");
+    const pathname = usePathname();
+    const isHomepage = pathname === "/" || /^\/[a-z]{2}\/?$/.test(pathname);
+    const bookingHref = isHomepage ? "#prenota" : "/#prenota";
 
     const visibleNav = navigation.main.filter(
         (item) => !('conditional' in item && item.conditional) || hasArticles
@@ -53,6 +57,16 @@ export function Header({ hasArticles = true }: HeaderProps) {
                                 </Link>
                             ))}
                         </nav>
+                        {/* Booking CTA */}
+                        <a
+                            href={bookingHref}
+                            className="inline-flex items-center gap-2 px-4 py-2 text-sm font-medium text-white bg-[var(--color-accent-primary)] hover:bg-[var(--color-accent-hover)] rounded-full transition-colors shadow-sm hover:shadow-md"
+                        >
+                            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {t("book")}
+                        </a>
                         {/* Language Switcher */}
                         <LanguageSwitcher />
                     </div>

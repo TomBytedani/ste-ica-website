@@ -38,13 +38,20 @@
                 "detail1": "Weekly or biweekly schedule",
                 "detail2": "Flexible appointments",
                 "detail3": "Co-constructed journey"
-            }
+            },
+            "ctaBooking": "Book Now"
         },
         "journey": {
             "title": "The Therapeutic Journey",
             "paragraph1": "The therapeutic journey focuses on the individual with the aim of supporting them in processing critical moments in life that create distress and that they feel unable to manage independently.",
             "paragraph2": "In the process, we focus on the individual and how they face different situations (relationships, work, and daily life), with particular attention to relational dynamics, while enhancing and strengthening the resources they already possess.",
             "paragraph3": "My approach is based on the therapeutic relationship as the main tool for change, in a context of empathetic and non-judgmental listening."
+        },
+        "booking": {
+            "title": "Book Now",
+            "subtitle": "Choose the date and time that work best for you and book directly online",
+            "widgetAriaTitle": "Appointment booking widget",
+            "widgetFallbackText": "Book an appointment"
         },
         "interventionAreas": {
             "title": "Areas of Intervention",
@@ -65,7 +72,8 @@
         "about": "About",
         "podcast": "Podcast",
         "articles": "Articles",
-        "contact": "Contact"
+        "contact": "Contact",
+        "book": "Book"
     },
     "footer": {
         "contactTitle": "Contact",
@@ -77,7 +85,7 @@
     "contact": {
         "title": "Contact Me",
         "subtitle": "Fill out the form or contact me directly",
-        "formTitle": "Request an Appointment",
+        "formTitle": "Request more information",
         "infoTitle": "Contact Information",
         "addressLabel": "Address",
         "emailLabel": "Email",

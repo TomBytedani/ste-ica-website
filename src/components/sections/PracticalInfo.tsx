@@ -2,6 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Button } from "@/components/ui/Button";
 
 export function PracticalInfo() {
     const t = useTranslations("homepage.practicalInfo");
@@ -133,6 +134,13 @@ export function PracticalInfo() {
                             </ul>
                         </div>
                     ))}
+                </div>
+
+                {/* CTA to booking */}
+                <div className="mt-12 text-center">
+                    <Button href="#prenota" variant="primary" size="lg" className="shadow-lg hover:shadow-xl">
+                        {t("ctaBooking")}
+                    </Button>
                 </div>
             </div>
         </section>

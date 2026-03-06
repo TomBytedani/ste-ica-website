@@ -105,7 +105,7 @@ export default async function ChiSonoPage({ params }: Props) {
                                     <div className="absolute inset-0 bg-[var(--color-bg-accent)] rounded-[3rem_5rem_4rem_6rem] rotate-3 opacity-60 scale-105" />
                                     <div className="relative aspect-[3/4] rounded-[3rem_5rem_4rem_6rem] overflow-hidden shadow-lg rotate-[-2deg] hover:rotate-0 transition-transform duration-500">
                                         <Image
-                                            src="/images/profile/stefano-icardi-profile.png"
+                                            src="/images/profile/profile-picture-260306.jpeg"
                                             alt="Dott. Stefano Icardi - Psicologo"
                                             fill
                                             className="object-cover"

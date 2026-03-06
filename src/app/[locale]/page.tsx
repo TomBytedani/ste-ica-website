@@ -5,6 +5,7 @@ import { WhyPsychologist } from "@/components/sections/WhyPsychologist";
 import { PracticalInfo } from "@/components/sections/PracticalInfo";
 import { Journey } from "@/components/sections/Journey";
 import { InterventionAreas } from "@/components/sections/InterventionAreas";
+import { BookingWidget } from "@/components/sections/BookingWidget";
 import { Contact } from "@/components/sections/Contact";
 import { SEO } from "@/components/shared/SEO";
 
@@ -19,6 +20,7 @@ export default function Home() {
                 <PracticalInfo />
                 <Journey />
                 <InterventionAreas />
+                <BookingWidget />
                 <Contact />
             </main>
             <Footer />

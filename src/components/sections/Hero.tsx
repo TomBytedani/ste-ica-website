@@ -52,7 +52,7 @@ export function Hero() {
                         <div className="absolute inset-0 bg-[var(--color-accent-primary)] rounded-[3rem_5rem_4rem_6rem] rotate-6 opacity-10 scale-105" />
                         <div className="relative aspect-[3/4] w-full max-w-sm lg:max-w-md rounded-[3rem_5rem_4rem_6rem] overflow-hidden shadow-2xl rotate-[-2deg] md:hover:rotate-0 transition-transform duration-500 ease-out">
                             <Image
-                                src="/images/profile/stefano-icardi-profile.png"
+                                src="/images/profile/profile-picture-260306.jpeg"
                                 alt={`${siteConfig.name} - Psicologo a Milano`}
                                 fill
                                 className="object-cover"

@@ -5,6 +5,7 @@ import { navigation } from "@/lib/constants";
 import { LanguageSwitcher } from "@/components/ui";
 import { useTranslations } from "next-intl";
 import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 interface MobileNavProps {
     isOpen: boolean;
@@ -14,6 +15,9 @@ interface MobileNavProps {
 
 export function MobileNav({ isOpen, onClose, hasArticles = true }: MobileNavProps) {
     const t = useTranslations('navigation');
+    const pathname = usePathname();
+    const isHomepage = pathname === "/" || /^\/[a-z]{2}\/?$/.test(pathname);
+    const bookingHref = isHomepage ? "#prenota" : "/#prenota";
 
     const navLabels: Record<string, string> = {
         'Home': t('home'),
@@ -73,6 +77,19 @@ export function MobileNav({ isOpen, onClose, hasArticles = true }: MobileNavProp
                             </Link>
                         </li>
                     ))}
+                    {/* Booking CTA */}
+                    <li className="pt-2 border-t border-gray-100">
+                        <a
+                            href={bookingHref}
+                            onClick={onClose}
+                            className="flex items-center gap-2 py-3 text-lg font-medium text-white bg-[var(--color-accent-primary)] hover:bg-[var(--color-accent-hover)] rounded-xl px-4 transition-colors text-center justify-center"
+                        >
+                            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                            </svg>
+                            {t('book')}
+                        </a>
+                    </li>
                     {/* Language Switcher in Mobile Menu */}
                     <li className="pt-2 border-t border-gray-100">
                         <div className="py-2">

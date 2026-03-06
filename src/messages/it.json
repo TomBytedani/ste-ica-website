@@ -38,13 +38,20 @@
                 "detail1": "Cadenza settimanale o quindicinale",
                 "detail2": "Flessibilità negli appuntamenti",
                 "detail3": "Co-costruzione del percorso"
-            }
+            },
+            "ctaBooking": "Prenota subito"
         },
         "journey": {
             "title": "Il percorso psicologico",
             "paragraph1": "Il percorso psicologico è incentrato sul singolo con la finalità di supportarlo nella rielaborazione di momenti critici della vita che gli creano disagio, e che si sente di non riuscire a gestire in autonomia.",
             "paragraph2": "Nel percorso ci si sofferma sul soggetto e su come affronta situazioni diverse (relazioni, lavoro e vita quotidiana), con particolare attenzione alle dinamiche relazionali, andando a valorizzare e potenziare le risorse che già possiede.",
             "paragraph3": "Il mio approccio si basa sulla relazione terapeutica come strumento principale di cambiamento, in un contesto di ascolto empatico e non giudicante."
+        },
+        "booking": {
+            "title": "Prenota subito",
+            "subtitle": "Scegli la data e l'orario più comodi per te e prenota direttamente online",
+            "widgetAriaTitle": "Widget di prenotazione visite",
+            "widgetFallbackText": "Prenota una visita"
         },
         "interventionAreas": {
             "title": "Aree di intervento",
@@ -65,7 +72,8 @@
         "about": "Chi Sono",
         "podcast": "Podcast",
         "articles": "Articoli",
-        "contact": "Contatti"
+        "contact": "Contatti",
+        "book": "Prenota"
     },
     "footer": {
         "contactTitle": "Contatti",
@@ -77,7 +85,7 @@
     "contact": {
         "title": "Contattami",
         "subtitle": "Compila il form o contattami direttamente",
-        "formTitle": "Richiedi un appuntamento",
+        "formTitle": "Richiedi più informazioni",
         "infoTitle": "Informazioni di contatto",
         "addressLabel": "Indirizzo",
         "emailLabel": "Email",
