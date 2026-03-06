@@ -266,7 +266,7 @@ export default async function ChiSonoPage({ params }: Props) {
                                     {settings.studio.postalCode} {settings.studio.city}, {settings.studio.province}
                                 </p>
                                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                                    <Button href="/#contatti" variant="primary">
+                                    <Button href="/#prenota" variant="primary">
                                         {t('studio.bookButton')}
                                     </Button>
                                     <Button
