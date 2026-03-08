@@ -2,7 +2,7 @@
 
 export const siteConfig = {
     name: "Stefano Icardi",
-    title: "Psicologo a Milano",
+    title: "Psicologo e Psicoterapeuta a Milano",
     description:
         "Psicologo clinico a Milano. Supporto psicologico e percorsi individuali per adulti con approccio relazionale e personalizzato.",
     url: "https://stefanoicardi.com",

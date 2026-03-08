@@ -195,31 +195,31 @@
         "homeButton": "Torna alla Home"
     },
     "metadata": {
-        "siteName": "Stefano Icardi - Psicologo",
-        "siteTitle": "Stefano Icardi | Psicologo a Milano",
+        "siteName": "Stefano Icardi - Psicologo e Psicoterapeuta",
+        "siteTitle": "Stefano Icardi | Psicologo e Psicoterapeuta a Milano",
         "homepage": {
-            "title": "Stefano Icardi | Psicologo a Milano",
-            "titleTemplate": "%s | Stefano Icardi Psicologo",
+            "title": "Stefano Icardi | Psicologo e Psicoterapeuta a Milano",
+            "titleTemplate": "%s | Stefano Icardi Psicologo e Psicoterapeuta",
             "description": "Psicologo clinico a Milano. Supporto psicologico e percorsi individuali per adulti con approccio relazionale e personalizzato. Prenota un appuntamento.",
-            "ogTitle": "Stefano Icardi | Psicologo a Milano",
+            "ogTitle": "Stefano Icardi | Psicologo e Psicoterapeuta a Milano",
             "ogDescription": "Supporto psicologico e percorsi individuali per adulti con approccio relazionale."
         },
         "chiSono": {
             "title": "Chi Sono",
             "description": "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico iscritto all'Ordine della Lombardia. Specializzando in Psicoterapia con approccio relazionale.",
-            "ogTitle": "Chi Sono | Stefano Icardi Psicologo",
+            "ogTitle": "Chi Sono | Stefano Icardi Psicologo e Psicoterapeuta",
             "ogDescription": "Scopri la formazione e l'esperienza professionale del Dott. Stefano Icardi, psicologo clinico a Milano."
         },
         "articoli": {
             "title": "Articoli",
             "description": "Leggi gli articoli di Stefano Icardi su psicologia, benessere e crescita personale.",
-            "ogTitle": "Articoli | Stefano Icardi Psicologo",
+            "ogTitle": "Articoli | Stefano Icardi Psicologo e Psicoterapeuta",
             "ogDescription": "Approfondimenti su psicologia, benessere e crescita personale."
         },
         "podcast": {
             "title": "Podcast",
             "description": "Ascolta il podcast di Stefano Icardi con riflessioni e approfondimenti su psicologia, relazioni e benessere mentale.",
-            "ogTitle": "Podcast | Stefano Icardi Psicologo",
+            "ogTitle": "Podcast | Stefano Icardi Psicologo e Psicoterapeuta",
             "ogDescription": "Riflessioni e approfondimenti su psicologia, relazioni e benessere mentale."
         },
         "notFound": {

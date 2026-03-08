@@ -195,31 +195,31 @@
         "homeButton": "Back to Home"
     },
     "metadata": {
-        "siteName": "Stefano Icardi - Psychologist",
-        "siteTitle": "Stefano Icardi | Psychologist in Milan",
+        "siteName": "Stefano Icardi - Psychologist & Psychotherapist",
+        "siteTitle": "Stefano Icardi | Psychologist & Psychotherapist in Milan",
         "homepage": {
-            "title": "Stefano Icardi | Psychologist in Milan",
-            "titleTemplate": "%s | Stefano Icardi Psychologist",
+            "title": "Stefano Icardi | Psychologist & Psychotherapist in Milan",
+            "titleTemplate": "%s | Stefano Icardi Psychologist & Psychotherapist",
             "description": "Clinical psychologist in Milan. Psychological support and individual therapy for adults with a relational and personalized approach. Book an appointment.",
-            "ogTitle": "Stefano Icardi | Psychologist in Milan",
+            "ogTitle": "Stefano Icardi | Psychologist & Psychotherapist in Milan",
             "ogDescription": "Psychological support and individual therapy for adults with a relational approach."
         },
         "chiSono": {
             "title": "About Me",
             "description": "Discover the education and professional experience of Dr. Stefano Icardi, clinical psychologist registered with the Order of Lombardy. Psychotherapy specialist in training with a relational approach.",
-            "ogTitle": "About Me | Stefano Icardi Psychologist",
+            "ogTitle": "About Me | Stefano Icardi Psychologist & Psychotherapist",
             "ogDescription": "Discover the education and professional experience of Dr. Stefano Icardi, clinical psychologist in Milan."
         },
         "articoli": {
             "title": "Articles",
             "description": "Read Stefano Icardi's articles on psychology, well-being, and personal growth.",
-            "ogTitle": "Articles | Stefano Icardi Psychologist",
+            "ogTitle": "Articles | Stefano Icardi Psychologist & Psychotherapist",
             "ogDescription": "Insights on psychology, well-being, and personal growth."
         },
         "podcast": {
             "title": "Podcast",
             "description": "Listen to Stefano Icardi's podcast with reflections and insights on psychology, relationships, and mental well-being.",
-            "ogTitle": "Podcast | Stefano Icardi Psychologist",
+            "ogTitle": "Podcast | Stefano Icardi Psychologist & Psychotherapist",
             "ogDescription": "Reflections and insights on psychology, relationships, and mental well-being."
         },
         "notFound": {
