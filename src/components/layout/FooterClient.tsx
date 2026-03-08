@@ -68,7 +68,7 @@ export function FooterClient({ contact, studio }: FooterClientProps) {
                         <p className="text-sm text-white/80 mb-4">
                             P.IVA {contactInfo.professional.vatNumber}
                         </p>
-                        <SocialLinks variant="light" />
+                        <SocialLinks />
                     </div>
                 </div>
 

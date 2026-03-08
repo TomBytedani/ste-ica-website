@@ -150,7 +150,7 @@ export function ContactClient({ contact, studio }: ContactClientProps) {
                             {/* Social Links */}
                             <div className="mt-6 pt-6 border-t border-gray-100">
                                 <p className="text-sm text-[var(--color-text-muted)] mb-3">{t("followSocial")}</p>
-                                <SocialLinks size="md" variant="filled" />
+                                <SocialLinks size="md" />
                             </div>
                         </div>
 
