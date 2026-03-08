@@ -24,7 +24,7 @@ export const contactInfo = {
     phone: "+39 334 1397960",
     social: {
         instagram: "https://www.instagram.com/stefano_icardi/",
-        linkedin: "https://www.linkedin.com/in/stefano-icardi-62a225134/",
+        linkedin: "https://www.linkedin.com/in/stefano-icardi-5516b11a4/",
     },
     professional: {
         title: "Psicologo clinico",
