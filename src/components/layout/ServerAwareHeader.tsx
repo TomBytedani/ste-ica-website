@@ -1,13 +1,10 @@
-import { getArticlesData } from "@/lib/articles";
 import { Header } from "./Header";
 
+// TODO: Restore dynamic article detection after DB migration (replaces Vercel Blob)
+// import { getArticlesData } from "@/lib/articles";
 export async function ServerAwareHeader() {
-    let hasArticles = false;
-    try {
-        const data = await getArticlesData();
-        hasArticles = data.articles.some((a) => a.published);
-    } catch {
-        hasArticles = false;
-    }
+    // Temporarily hardcoded to false — blob storage is at 100% capacity
+    // and there are no official articles yet.
+    const hasArticles = false;
     return <Header hasArticles={hasArticles} />;
 }
