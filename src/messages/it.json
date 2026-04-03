@@ -3,7 +3,7 @@
         "hero": {
             "title": "Stefano Icardi",
             "subtitle": "Psicologo e Psicoterapeuta",
-            "subtitleExtended": "Psicologo e Psicoterapeuta specializzato in Psicoterapia Psicoanalitica Individuale",
+            "subtitleExtended": "Psicologo e Psicoterapeuta specializzato in Psicoterapia Psicoanalitica Individuale e di Gruppo",
             "description": "Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti. Il mio approccio è di tipo relazionale, integrato e personalizzato.",
             "ctaPrimary": "Scrivimi",
             "ctaSecondary": "Scopri di più",
@@ -133,12 +133,12 @@
     "chiSono": {
         "hero": {
             "title": "Chi Sono",
-            "subtitle": "Psicologo e Psicoterapeuta specializzato in Psicoterapia Psicoanalitica Individuale"
+            "subtitle": "Psicologo e Psicoterapeuta specializzato in Psicoterapia Psicoanalitica Individuale e di Gruppo"
         },
         "intro": {
             "name": "Dott. Stefano Icardi",
             "badge1": "Psicologo e Psicoterapeuta",
-            "badge2": "Specializzato in Psicoterapia Psicoanalitica Individuale",
+            "badge2": "Specializzato in Psicoterapia Psicoanalitica Individuale e di Gruppo",
             "description1": "Mi occupo di supporto psicologico e percorsi psicologici individuali rivolti ad adulti. Il mio approccio è di tipo relazionale, integrato e personalizzato.",
             "description2": "Sono iscritto all'Ordine degli Psicologi della Lombardia, Albo A",
             "contactButton": "Contattami",
@@ -146,7 +146,7 @@
         },
         "formazione": {
             "title": "Formazione",
-            "degree": "Laurea Magistrale in Psicologia Clinica e Promozione della Salute",
+            "degree": "Laurea in Scienze e Techniche Psicologiche",
             "university": "Università Cattolica del Sacro Cuore",
             "specialization": "Specializzazione in Psicoterapia Gruppoanalitica",
             "school": "COIRAG (Confederazione di Organizzazioni Italiane per la Ricerca Analitica sui Gruppi), Milano",

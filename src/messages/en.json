@@ -3,7 +3,7 @@
         "hero": {
             "title": "Stefano Icardi",
             "subtitle": "Psychologist and Psychotherapist",
-            "subtitleExtended": "Psychologist and Psychotherapist specialized in Individual Psychoanalytic Psychotherapy",
+            "subtitleExtended": "Psychologist and Psychotherapist specialized in Individual and Group Psychoanalytic Psychotherapy",
             "description": "I provide psychological support and individual therapy for adults. My approach is relational, integrated, and personalized.",
             "ctaPrimary": "Contact Me",
             "ctaSecondary": "Learn More",
@@ -133,12 +133,12 @@
     "chiSono": {
         "hero": {
             "title": "About Me",
-            "subtitle": "Psychologist and Psychotherapist specialized in Individual Psychoanalytic Psychotherapy"
+            "subtitle": "Psychologist and Psychotherapist specialized in Individual and Group Psychoanalytic Psychotherapy"
         },
         "intro": {
             "name": "Dr. Stefano Icardi",
             "badge1": "Psychologist and Psychotherapist",
-            "badge2": "Specialized in Individual Psychoanalytic Psychotherapy",
+            "badge2": "Specialized in Individual and Group Psychoanalytic Psychotherapy",
             "description1": "I provide psychological support and individual therapy for adults. My approach is relational, integrated, and personalized.",
             "description2": "I am registered with the Order of Psychologists of Lombardy, Register A",
             "contactButton": "Contact Me",
@@ -146,7 +146,7 @@
         },
         "formazione": {
             "title": "Education",
-            "degree": "Master's Degree in Clinical Psychology and Health Promotion",
+            "degree": "Degree in Psychological Sciences and Techniques",
             "university": "Università Cattolica del Sacro Cuore",
             "specialization": "Specialization in Group-Analytic Psychotherapy",
             "school": "COIRAG (Confederazione di Organizzazioni Italiane per la Ricerca Analitica sui Gruppi), Milan",
